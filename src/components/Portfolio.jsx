@@ -2,14 +2,16 @@ import PortfolioCard from './PortfolioCard'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
-import image from './assets/cardImages/image.jpg'
-import image1 from './assets/cardImages/image1.jpg'
-import image2 from './assets/cardImages/image2.jpg'
-import image3 from './assets/cardImages/image3.jpg'
-import image4 from './assets/cardImages/image4.jpg'
-import image5 from './assets/cardImages/image5.jpg'
-import image6 from './assets/cardImages/image6.jpg'
-import image7 from './assets/cardImages/image7.jpg'
+import styles from '../styles/Portfolio.module.css'
+import image from '../assets/cardImages/image.jpg'
+import image1 from '../assets/cardImages/image1.jpg'
+import image2 from '../assets/cardImages/image2.jpg'
+import image3 from '../assets/cardImages/image3.jpg'
+import image4 from '../assets/cardImages/image4.jpg'
+import image5 from '../assets/cardImages/image5.jpg'
+import image6 from '../assets/cardImages/image6.jpg'
+import image7 from '../assets/cardImages/image7.jpg'
+import PortfolioBg from './PortfolioBg'
 
 const cards = [
   {
@@ -66,16 +68,31 @@ const Portfolio = () => {
   useEffect(() => {
     Aos.init({ duration: 5000 })
   }, [])
+
   return (
-    <div className='portfolio' id='portfolio'>
-      <div className='wave1'></div>
-      <div className='portfolio__bg'>
-        <div className='portfolio__title'>
+    <div className={styles.container} id='portfolio'>
+      <div className={styles.wave1}>
+        <svg
+          width='300'
+          height='35'
+          viewBox='0 0 300 35'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            d='M0 34.7884C60 34.7884 40.5 -11.7774 95 6.0902C136 23.5 140.324 -0.589757 160 0.155429C195.5 1.49991 172 13.0387 223 6.09015C257.48 1.39244 247 34.7884 300 34.7884C200 34.7884 100 34.7884 0 34.7884Z'
+            fill='#FF7A00'
+          />
+        </svg>
+      </div>
+      <div className={styles.bg}>
+        <div className={styles.title}>
           <h3 data-aos='fade-down' data-aos-duration='1500'>
             Portfolio
           </h3>
         </div>
-        <div className='cards'>
+        <PortfolioBg />
+        <div className={styles.cards}>
           {cards.map((card) => (
             <PortfolioCard
               key={card.id}
@@ -86,7 +103,6 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
-      <div className='wave2'></div>
     </div>
   )
 }

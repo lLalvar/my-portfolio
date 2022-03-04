@@ -1,12 +1,13 @@
 import 'aos/dist/aos.css'
+import styles from '../styles/PortfolioCard.module.css'
 
 const PortfolioCard = ({ img, title, url }) => {
   return (
-    <div data-aos='fade-up' data-aos-duration='1000' className='card'>
+    <div data-aos='fade-up' data-aos-duration='1000' className={styles.card}>
       <a href={url} target='_blank'>
-        <div className='card__overlay'>
-          <div className='card__wave'></div>
-          <div className='card__title'>
+        <div className={styles.overlay}>
+          <div className={styles.wave}></div>
+          <div className={styles.title}>
             <h4>{title}</h4>
           </div>
         </div>

@@ -1,0 +1,181 @@
+.container {
+  display: flex;
+  margin-top: 1rem;
+  max-width: 1440px;
+  width: 90vw;
+  margin: auto;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
+.logoBg {
+  position: absolute;
+  width: 200px;
+  left: -58px;
+  top: -50px;
+}
+
+.logo h2 {
+  font-size: 2.25rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.hamburgerMenu {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 70px;
+  height: 70px;
+  font-size: 2rem;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 300ms;
+}
+
+.hamburgerNavItems {
+  cursor: pointer;
+}
+
+header ul {
+  display: flex;
+  gap: 1rem;
+}
+
+header li {
+  font-size: 1.125rem;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+header li:hover {
+  color: var(--primary);
+}
+
+header li.active .underline {
+  width: 100%;
+}
+
+header li.active {
+  color: var(--primary);
+}
+
+.underline {
+  width: 0;
+  height: 3px;
+  background-color: var(--primary);
+  transition: 300ms;
+}
+
+header li:hover .underline {
+  width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  .logo-bg {
+    width: 160px;
+    left: -46px;
+    top: -58px;
+  }
+
+  .logo h2 {
+    font-size: 1.85rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  header ul {
+    display: none;
+  }
+
+  header.container {
+    margin-top: 1rem;
+    padding: 0rem 1rem;
+  }
+}
+
+returnBtn {
+  bottom: 20px;
+  right: 20px;
+}
+
+header.container {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
+.logo-bg {
+  position: absolute;
+  width: 200px;
+  left: -58px;
+  top: -50px;
+}
+
+.logo h2 {
+  font-size: 2.25rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+header ul {
+  display: flex;
+  gap: 1rem;
+}
+
+header li {
+  font-size: 1.125rem;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+header li:hover {
+  color: var(--primary);
+}
+
+header li.active .underline {
+  width: 100%;
+}
+
+header li.active {
+  color: var(--primary);
+}
+
+.underline {
+  width: 0;
+  height: 3px;
+  background-color: var(--primary);
+  transition: 300ms;
+}
+
+header li:hover .underline {
+  width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  .logo-bg {
+    width: 160px;
+    left: -46px;
+    top: -58px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header ul {
+    display: none;
+  }
+
+  header.container {
+    margin-top: 1rem;
+    padding: 0rem 1rem;
+  }
+}

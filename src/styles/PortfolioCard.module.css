@@ -1,0 +1,92 @@
+.card {
+  cursor: pointer;
+  position: relative;
+  transition: 300ms;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card img {
+  border-radius: 18px;
+}
+
+.card:hover .overlay {
+  transform: translateY(0);
+  opacity: 0.95;
+  border-radius: 0 0 13px 13px;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--primary);
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transform: translateY(120%);
+  transition: 300ms;
+  opacity: 0;
+}
+
+.wave {
+  width: 500px;
+  height: 60px;
+  background: url(../assets/wave1.svg);
+  background-size: cover;
+  transform: translateY(-80px);
+}
+
+.card h4 {
+  font-size: 1.75rem;
+}
+
+.title {
+  position: absolute;
+  transform: translateY(-20px);
+}
+
+@media screen and (max-width: 768px) {
+  .card img {
+    border-radius: 17px;
+  }
+
+  .card {
+    overflow: hidden;
+  }
+
+  .overlay {
+    transform: translateY(60%);
+    opacity: 1;
+    border-radius: 15px;
+  }
+
+  .card:hover .overlay {
+    transform: translateY(60%);
+    border-radius: 14px;
+  }
+
+  .wave {
+    opacity: 0.6;
+    opacity: 0;
+    transform: scale(1.8) translateY(-57px);
+  }
+
+  .card h4 {
+    transform: translateY(-10px);
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wave {
+    transform: scale(1.8) translateY(-40px);
+  }
+
+  .card h4 {
+    font-size: 1rem;
+  }
+}

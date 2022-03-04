@@ -1,0 +1,176 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem auto 0;
+  max-width: 1200px;
+  width: 90vw;
+  gap: 2rem;
+}
+
+.img {
+  width: 600px;
+}
+
+.title {
+  font-size: 4.5rem;
+  line-height: 1.2;
+}
+
+.title span {
+  color: var(--primary);
+}
+
+.desc {
+  font-size: 1.5rem;
+}
+
+.hero {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.twitter {
+  top: 300px;
+  left: 20px;
+}
+
+.linkedin {
+  top: 425px;
+  left: 120px;
+  font-size: 5.875rem;
+}
+
+.facebook {
+  top: 235px;
+  left: 510px;
+  font-size: 3.375rem;
+}
+
+.text {
+  max-width: 400px;
+}
+
+@media screen and (max-width: 1050px) {
+  .img {
+    width: 400px;
+  }
+
+  .twitter {
+    font-size: 2.25rem;
+    top: 200px;
+    left: 10px;
+  }
+
+  .linkedin {
+    top: 280px;
+    left: 70px;
+    font-size: 4rem;
+  }
+
+  .facebook {
+    top: 145px;
+    left: 335px;
+    font-size: 2.625rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .desc {
+    font-size: 1.125rem;
+  }
+
+  .portfolio h3 {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+
+  .card {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    margin: 2rem auto;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .img {
+    width: 300px;
+  }
+
+  .twitter {
+    font-size: 1.75rem;
+    top: 150px;
+    left: 7px;
+  }
+
+  .linkedin {
+    font-size: 3rem;
+    top: 215px;
+    left: 60px;
+  }
+
+  .facebook {
+    font-size: 2rem;
+    top: 115px;
+    left: 250px;
+  }
+
+  .portfolio h3 {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .img {
+    width: 320px;
+  }
+
+  .twitter {
+    font-size: 1.75rem;
+    top: 155px;
+    left: 10px;
+  }
+
+  .linkedin {
+    font-size: 3.375rem;
+    top: 225px;
+    left: 65px;
+  }
+
+  .facebook {
+    font-size: 2rem;
+    top: 120px;
+    left: 265px;
+  }
+
+  .portfolio h3 {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+}

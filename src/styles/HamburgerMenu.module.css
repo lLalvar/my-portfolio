@@ -1,0 +1,88 @@
+.hamburgerMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 300ms;
+}
+
+@media screen and (min-width: 700px) {
+  .hamburgerMenu {
+    display: none;
+  }
+}
+
+.hamburgerMenuBg {
+  transform: scale(0.4, 0.65);
+  position: absolute;
+  z-index: -1;
+  top: -40px;
+  right: -100px;
+}
+
+.hamburgerNavHome {
+  transform: translateX(150%);
+  transition: 400ms;
+}
+
+.hamburgerNavPortfolio {
+  transform: translateX(150%);
+  transition: 600ms;
+}
+
+.hamburgerNavContact {
+  transform: translateX(150%);
+  transition: 800ms;
+}
+
+.hamburgerNavOpened {
+  transform: translateX(0);
+}
+
+.hamburgerMenuOpened .hamburgerMenuBg {
+  transform: scale(1.6, 3.2);
+  position: absolute;
+  z-index: -1;
+  top: 25px;
+  left: 0px;
+}
+
+.hamburgerNavItems {
+  cursor: pointer;
+}
+
+.hamburgerMenuIcon {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.hamburgerNav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+  color: var(--secondary);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  user-select: none;
+}
+
+.hamburgerMenuOpened {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 160px;
+  height: 230px;
+  cursor: auto;
+}

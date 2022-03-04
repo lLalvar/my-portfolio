@@ -1,0 +1,57 @@
+.returnBtn {
+  z-index: 11;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.9;
+  transition: 400ms;
+  color: var(--primary);
+}
+
+@media screen and (min-width: 1500px) {
+  .returnBtn {
+    right: calc(50% - 750px);
+  }
+}
+
+.returnBtn.hidden {
+  opacity: 0;
+  z-index: -10;
+}
+
+.returnBtn button {
+  background-color: #fff;
+  cursor: pointer;
+  opacity: 0.9;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 50px;
+  overflow: hidden;
+}
+
+.returnBtn1 {
+  position: absolute;
+  left: 0;
+  top: -5px;
+  transition: 300ms;
+}
+
+.returnBtn1.active {
+  top: -50px;
+}
+
+.returnBtn2 {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  visibility: hidden;
+  transition: 400ms;
+}
+
+.returnBtn2.active {
+  top: -5px;
+  visibility: visible;
+}
