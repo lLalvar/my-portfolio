@@ -25,10 +25,15 @@ footer {
   font-size: 1.25rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  color: var(--primary);
 }
 
 .title {
   margin-bottom: 1rem;
+}
+
+.infoWrapper {
+  color: white;
 }
 
 .infoWrapper:hover {

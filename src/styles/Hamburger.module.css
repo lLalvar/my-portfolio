@@ -9,10 +9,11 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  transform: scale(0.8);
 }
 
 .hamRotate.active {
-  transform: rotate(45deg);
+  transform: rotate(45deg) scale(0.8);
 }
 
 .hamRotate180.active {

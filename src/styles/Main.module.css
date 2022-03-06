@@ -12,6 +12,10 @@
   width: 600px;
 }
 
+.text {
+  max-width: 300px;
+}
+
 .title {
   font-size: 4.5rem;
   line-height: 1.2;
@@ -22,7 +26,7 @@
 }
 
 .desc {
-  font-size: 1.5rem;
+  font-size: 1.725rem;
 }
 
 .hero {
@@ -57,10 +61,6 @@
   font-size: 3.375rem;
 }
 
-.text {
-  max-width: 400px;
-}
-
 @media screen and (max-width: 1050px) {
   .img {
     width: 400px;
@@ -91,7 +91,7 @@
   }
 
   .desc {
-    font-size: 1.125rem;
+    font-size: 1.375rem;
   }
 
   .portfolio h3 {

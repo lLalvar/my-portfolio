@@ -20,9 +20,7 @@ const Main = () => {
         <h1 className={styles.title}>
           Hi! I Am <br /> <span>Lalvar</span>
         </h1>
-        <p className={styles.desc}>
-          I am an artist, designer, and self-taught Front-End developer.
-        </p>
+        <p className={styles.desc}>I am a Front-end React developer.</p>
       </div>
       <div className={styles.hero} data-aos='fade-up' data-aos-duration='1500'>
         <div className={styles.img}>

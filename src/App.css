@@ -1,3 +1,9 @@
+:root {
+  --gradient: linear-gradient(to left, var(--secondary), #313362);
+  --primary: hsl(19, 74%, 60%);
+  --secondary: #101133;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 /* Box sizing rules */
@@ -51,12 +57,6 @@ button,
 textarea,
 select {
   font: inherit;
-}
-
-:root {
-  --gradient: linear-gradient(to left, #101133, #313362);
-  --primary: #ff7a00;
-  --secondary: #101133;
 }
 
 body {

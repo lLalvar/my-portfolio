@@ -1,6 +1,7 @@
 import styles from '../styles/Header.module.css'
 import ScrollTopBtn from './ScrollTopBtn'
 import HamburgerMenu from './HamburgerMenu'
+import { Colors } from '../helpers/Colors'
 
 import 'aos/dist/aos.css'
 
@@ -32,8 +33,8 @@ const Header = () => {
               y2='171.652'
               gradientUnits='userSpaceOnUse'
             >
-              <stop stopColor='#F87537' />
-              <stop offset='1' stopColor='#FBA81F' />
+              <stop stopColor='#b86038' />
+              <stop offset='1' stopColor={Colors.primary} />
             </linearGradient>
             <clipPath id='clip0_145_12'>
               <rect

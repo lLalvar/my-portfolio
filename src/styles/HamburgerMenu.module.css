@@ -2,8 +2,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
   font-size: 2rem;
   z-index: 1;
   cursor: pointer;
@@ -18,10 +18,10 @@
 }
 
 .hamburgerMenuBg {
-  transform: scale(0.4, 0.65);
+  transform: scale(0.35, 0.55);
   position: absolute;
   z-index: -1;
-  top: -40px;
+  top: -42px;
   right: -100px;
 }
 

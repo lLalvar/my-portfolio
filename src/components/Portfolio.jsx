@@ -12,6 +12,7 @@ import image5 from '../assets/cardImages/image5.png'
 import image6 from '../assets/cardImages/image6.png'
 import image7 from '../assets/cardImages/image7.png'
 import PortfolioBg from './PortfolioBg'
+import { Colors } from '../helpers/Colors'
 
 const cards = [
   {
@@ -81,11 +82,14 @@ const Portfolio = () => {
         >
           <path
             d='M0 34.7884C60 34.7884 40.5 -11.7774 95 6.0902C136 23.5 140.324 -0.589757 160 0.155429C195.5 1.49991 172 13.0387 223 6.09015C257.48 1.39244 247 34.7884 300 34.7884C200 34.7884 100 34.7884 0 34.7884Z'
-            fill='#FF7A00'
+            fill={Colors.primary}
           />
         </svg>
       </div>
-      <div className={styles.bg}>
+      <div
+        className={styles.bg}
+        style={{ backgroundColor: `${Colors.primary}` }}
+      >
         <div className={styles.title}>
           <h3 data-aos='fade-down' data-aos-duration='1500'>
             Portfolio
