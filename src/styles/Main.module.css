@@ -33,31 +33,85 @@
   position: relative;
 }
 
+.iconWrapper {
+  position: absolute;
+  border-radius: 50%;
+  transition: 300ms ease-in-out;
+}
+
+.iconWrapper::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: 300ms ease-in-out;
+}
+
+.twitterWrapper {
+  top: 300px;
+  left: 15px;
+  width: 60px;
+  height: 60px;
+}
+
+.twitterWrapper::after {
+  width: 60px;
+  height: 60px;
+  border: 3px solid white;
+  transform: scale(0.6);
+}
+
+.linkedinWrapper {
+  top: 420px;
+  left: 120px;
+  width: 96px;
+  height: 96px;
+}
+
+.linkedinWrapper::after {
+  width: 96px;
+  height: 96px;
+  border: 3px solid white;
+  transform: scale(0.7);
+}
+
+.facebookWrapper {
+  top: 220px;
+  left: 495px;
+  width: 74px;
+  height: 74px;
+}
+
+.facebookWrapper::after {
+  width: 74px;
+  height: 74px;
+  border: 3px solid white;
+  transform: scale(0.7);
+}
+
+.iconWrapper:hover::after {
+  transform: scale(1);
+}
+
+.iconWrapper:hover {
+  transform: scale(1.1);
+}
+
 .icon {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 3rem;
   cursor: pointer;
   transition: 300ms;
 }
 
-.icon:hover {
-  transform: scale(1.1);
-}
-
-.twitter {
-  top: 300px;
-  left: 20px;
-}
-
 .linkedin {
-  top: 425px;
-  left: 120px;
   font-size: 5.875rem;
 }
 
 .facebook {
-  top: 235px;
-  left: 510px;
   font-size: 3.375rem;
 }
 
@@ -68,20 +122,50 @@
 
   .twitter {
     font-size: 2.25rem;
-    top: 200px;
-    left: 10px;
   }
 
   .linkedin {
-    top: 280px;
-    left: 70px;
     font-size: 4rem;
   }
 
   .facebook {
-    top: 145px;
-    left: 335px;
     font-size: 2.625rem;
+  }
+
+  .twitterWrapper {
+    top: 200px;
+    left: 5px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .twitterWrapper::after {
+    width: 48px;
+    height: 48px;
+  }
+
+  .linkedinWrapper {
+    top: 278px;
+    left: 78px;
+    width: 66px;
+    height: 66px;
+  }
+
+  .linkedinWrapper::after {
+    width: 66px;
+    height: 66px;
+  }
+
+  .facebookWrapper {
+    top: 140px;
+    left: 325px;
+    width: 58px;
+    height: 58px;
+  }
+
+  .facebookWrapper::after {
+    width: 58px;
+    height: 58px;
   }
 }
 
@@ -118,26 +202,24 @@
     width: 320px;
   }
 
-  .twitter {
-    font-size: 1.75rem;
-    top: 155px;
-    left: 10px;
-  }
-
-  .linkedin {
-    font-size: 3.375rem;
-    top: 225px;
-    left: 65px;
-  }
-
-  .facebook {
-    font-size: 2rem;
-    top: 120px;
-    left: 265px;
-  }
   .cardsTitle {
     font-size: 3rem;
     margin-top: 2rem;
+  }
+
+  .twitterWrapper {
+    top: 150px;
+    left: -1px;
+  }
+
+  .linkedinWrapper {
+    top: 218px;
+    left: 60px;
+  }
+
+  .facebookWrapper {
+    top: 110px;
+    left: 256px;
   }
 }
 

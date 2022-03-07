@@ -27,23 +27,31 @@ const Main = () => {
           <img src={HeroImg} alt='hero image' />
         </div>
         <a href='https://twitter.com/ILalvar' target='_blank' rel='noreferrer'>
-          <AiFillTwitterCircle className={`${styles.twitter} ${styles.icon}`} />
+          <div className={`${styles.twitterWrapper} ${styles.iconWrapper}`}>
+            <AiFillTwitterCircle
+              className={`${styles.twitter} ${styles.icon}`}
+            />
+          </div>
         </a>
         <a
           href='https://www.linkedin.com/in/lalvar/'
           target='_blank'
           rel='noreferrer'
         >
-          <TiSocialLinkedinCircular
-            className={`${styles.linkedin} ${styles.icon}`}
-          />
+          <div className={`${styles.linkedinWrapper} ${styles.iconWrapper}`}>
+            <TiSocialLinkedinCircular
+              className={`${styles.linkedin} ${styles.icon}`}
+            />
+          </div>
         </a>
         <a
           href='https://www.facebook.com/mnacakanyan.lalvar'
           target='_blank'
           rel='noreferrer'
         >
-          <FaFacebook className={`${styles.facebook} ${styles.icon}`} />
+          <div className={`${styles.facebookWrapper} ${styles.iconWrapper}`}>
+            <FaFacebook className={`${styles.facebook} ${styles.icon}`} />
+          </div>
         </a>
       </div>
     </main>

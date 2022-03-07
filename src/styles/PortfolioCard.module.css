@@ -1,7 +1,7 @@
 .card {
   cursor: pointer;
   position: relative;
-  transition: 300ms;
+  transition: 300ms ease-in-out;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@
   height: 100px;
   text-align: center;
   transform: translateY(120%);
-  transition: 300ms;
+  transition: 300ms ease-in-out;
   opacity: 0;
 }
 
