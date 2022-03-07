@@ -24,7 +24,7 @@ const Main = () => {
       </div>
       <div className={styles.hero} data-aos='fade-up' data-aos-duration='1500'>
         <div className={styles.img}>
-          <img src={HeroImg} alt='hero' />
+          <img src={HeroImg} alt='hero image' />
         </div>
         <a href='https://twitter.com/ILalvar' target='_blank' rel='noreferrer'>
           <AiFillTwitterCircle className={`${styles.twitter} ${styles.icon}`} />

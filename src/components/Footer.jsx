@@ -1,10 +1,9 @@
 import { FaFacebook, FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
-import { AiFillPhone } from 'react-icons/ai'
 import { IoLocationSharp } from 'react-icons/io5'
-import { ImMail4 } from 'react-icons/im'
 import styles from '../styles/Footer.module.css'
 import FooterItem from './FooterItem'
 import { Colors } from '../helpers/Colors'
+import image from '../assets/map.jpg'
 
 const Footer = () => {
   return (
@@ -41,12 +40,6 @@ const Footer = () => {
           </svg>
         </div>
         <div className={styles.wrapper}>
-          <div>
-            <h4 className={styles.title}>Contact Information</h4>
-            <FooterItem title={'mail@example.com'} icon={<ImMail4 />} />
-            <FooterItem title={'(123) 533-343-344'} icon={<AiFillPhone />} />
-            <FooterItem title={'Armenia, Yerevan'} icon={<IoLocationSharp />} />
-          </div>
           <div className={styles.itemsWrapper}>
             <h4 className={styles.title}>Social Media</h4>
             <a href='https://www.linkedin.com/in/lalvar/' target='_blank'>
@@ -63,6 +56,21 @@ const Footer = () => {
             </a>
             <a href='https://github.com/lLalvar' target='_blank'>
               <FooterItem title={'Github'} icon={<FaGithub />} />
+            </a>
+          </div>
+          <div className={styles.locationContainer}>
+            <h4 className={styles.title}>Location</h4>
+            <a
+              href='https://www.google.com/maps/place/Yerevan,+Armenia/@40.1733279,44.5233817,10.75z/data=!4m5!3m4!1s0x406aa2dab8fc8b5b:0x3d1479ae87da526a!8m2!3d40.1872023!4d44.515209'
+              target='_blank'
+            >
+              <div className={styles.locationWrapper}>
+                <FooterItem
+                  title={'Armenia, Yerevan'}
+                  icon={<IoLocationSharp />}
+                />
+                <img className={styles.img} src={image} alt='Location on Map' />
+              </div>
             </a>
           </div>
         </div>

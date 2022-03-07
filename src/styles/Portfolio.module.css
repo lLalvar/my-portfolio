@@ -12,7 +12,7 @@
   z-index: 2;
 }
 
-.bg {
+.cardsWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +23,7 @@
   padding-bottom: 4rem;
 }
 
-.wave1 {
+.wave {
   position: absolute;
   top: 0;
   left: 50%;
@@ -32,19 +32,19 @@
 }
 
 @media (min-width: 480px) {
-  .wave1 {
+  .wave {
     transform: translate(-50%, -42px) scale(1.6);
   }
 }
 
 @media (min-width: 768px) {
-  .wave1 {
+  .wave {
     transform: translate(-50%, -54px) scale(2.5);
   }
 }
 
 @media (min-width: 1200px) {
-  .wave1 {
+  .wave {
     transform: translate(-50%, -74px) scale(4);
   }
 
@@ -54,7 +54,7 @@
 }
 
 @media (min-width: 1500px) {
-  .wave1 {
+  .wave {
     transform: translate(-50%, -74px) scale(5, 4);
   }
 }

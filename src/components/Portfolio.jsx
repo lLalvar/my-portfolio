@@ -72,7 +72,7 @@ const Portfolio = () => {
 
   return (
     <div className={styles.container} id='portfolio'>
-      <div className={styles.wave1}>
+      <div className={styles.wave}>
         <svg
           width='300'
           height='35'
@@ -87,11 +87,15 @@ const Portfolio = () => {
         </svg>
       </div>
       <div
-        className={styles.bg}
+        className={styles.cardsWrapper}
         style={{ backgroundColor: `${Colors.primary}` }}
       >
         <div className={styles.title}>
-          <h3 data-aos='fade-down' data-aos-duration='1500'>
+          <h3
+            className={styles.cardsTitle}
+            data-aos='fade-down'
+            data-aos-duration='1500'
+          >
             Portfolio
           </h3>
         </div>

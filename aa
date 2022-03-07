@@ -1,0 +1,29 @@
+[33mcommit 063a3fd24051bddbdf7a601fa334dfc76259a1bf[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: ILalvar <mnacakanyan.lalvar@gmail.com>
+Date:   Sun Mar 6 10:13:28 2022 -0800
+
+    theme change
+
+[33mcommit 4e7549e067b154430ac50a7c8172e250664cb947[m
+Author: ILalvar <mnacakanyan.lalvar@gmail.com>
+Date:   Sun Mar 6 06:45:59 2022 -0800
+
+    image optimization
+
+[33mcommit a047a1caeeffb194a802178610c151f3f703ff12[m
+Author: ILalvar <mnacakanyan.lalvar@gmail.com>
+Date:   Fri Mar 4 10:03:13 2022 -0800
+
+    refactoring
+
+[33mcommit d588a353d89bdbad46c7a3688366240e1e4c55d1[m
+Author: ILalvar <mnacakanyan.lalvar@gmail.com>
+Date:   Thu Jan 20 00:04:32 2022 -0800
+
+    first commit
+
+[33mcommit fc3ed59a854b93eedb0197f1aa7bea6c161bfb20[m
+Author: ILalvar <mnacakanyan.lalvar@gmail.com>
+Date:   Sat Jan 8 00:12:03 2022 -0800
+
+    Initialize project using Create React App

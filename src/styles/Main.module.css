@@ -94,7 +94,7 @@
     font-size: 1.375rem;
   }
 
-  .portfolio h3 {
+  .cardsTitle {
     font-size: 3rem;
     margin-top: 1rem;
   }
@@ -112,39 +112,6 @@
 
   .title {
     font-size: 3rem;
-  }
-
-  .img {
-    width: 300px;
-  }
-
-  .twitter {
-    font-size: 1.75rem;
-    top: 150px;
-    left: 7px;
-  }
-
-  .linkedin {
-    font-size: 3rem;
-    top: 215px;
-    left: 60px;
-  }
-
-  .facebook {
-    font-size: 2rem;
-    top: 115px;
-    left: 250px;
-  }
-
-  .portfolio h3 {
-    font-size: 3rem;
-    margin-top: 2rem;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .title {
-    font-size: 2.5rem;
   }
 
   .img {
@@ -168,8 +135,18 @@
     top: 120px;
     left: 265px;
   }
+  .cardsTitle {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+}
 
-  .portfolio h3 {
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .cardsTitle {
     font-size: 2.5rem;
     margin-top: 3rem;
   }

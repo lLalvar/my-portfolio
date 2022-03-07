@@ -23,8 +23,7 @@ const PortfolioCard = ({ img, title, url }) => {
             <h4>{title}</h4>
           </div>
         </div>
-
-        <img src={img} alt='my work' />
+        <img src={img} alt='my work image' />
       </a>
     </div>
   )

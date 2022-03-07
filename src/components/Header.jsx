@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className={styles.container}>
       <div className={styles.logo}>
-        <h2>Lalvar</h2>
+        <h2 className={styles.logoTitle}>Lalvar</h2>
         <svg
           className={styles.logoBg}
           width='283'
@@ -50,24 +50,24 @@ const Header = () => {
       <nav>
         <ScrollTopBtn />
         <HamburgerMenu />
-        <ul>
-          <li className={styles.active}>
+        <div className={styles.navContainer}>
+          <div className={`${styles.navItem} ${styles.active}`}>
             <h3>Home</h3>
             <div className={`${styles.underline} ${styles.active}`}></div>
-          </li>
-          <li>
+          </div>
+          <div className={styles.navItem}>
             <a href='#portfolio'>
               <h3>Portfolio</h3>
               <div className={styles.underline}></div>
             </a>
-          </li>
-          <li>
+          </div>
+          <div className={styles.navItem}>
             <a href='#footer'>
               <h3>Contact</h3>
               <div className={styles.underline}></div>
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </nav>
     </header>
   )
