@@ -11,6 +11,7 @@ import image4 from '../assets/cardImages/image4.png'
 import image5 from '../assets/cardImages/image5.png'
 import image6 from '../assets/cardImages/image6.png'
 import image7 from '../assets/cardImages/image7.png'
+import image8 from '../assets/cardImages/image8.png'
 import PortfolioBg from './PortfolioBg'
 import { Colors } from '../helpers/Colors'
 
@@ -62,6 +63,12 @@ const cards = [
     path: image7,
     title: 'GPT-3',
     url: 'https://gpt3-react-mastery.netlify.app/',
+  },
+  {
+    id: 8,
+    path: image8,
+    title: 'Pizza Ordering App',
+    url: 'https://nextjs-pizza-ordering-app.netlify.app/',
   },
 ]
 
