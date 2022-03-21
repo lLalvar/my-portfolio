@@ -12,63 +12,70 @@ import image5 from '../assets/cardImages/image5.png'
 import image6 from '../assets/cardImages/image6.png'
 import image7 from '../assets/cardImages/image7.png'
 import image8 from '../assets/cardImages/image8.png'
+import image9 from '../assets/cardImages/image9.png'
 import PortfolioBg from './PortfolioBg'
 import { Colors } from '../helpers/Colors'
 
 const cards = [
   {
     id: 1,
+    path: image9,
+    title: 'React Recipe App',
+    url: 'https://lalvar-react-recipe-app.netlify.app/',
+  },
+  {
+    id: 2,
+    path: image8,
+    title: 'Pizza Ordering App',
+    url: 'https://nextjs-pizza-ordering-app.netlify.app/',
+  },
+  {
+    id: 3,
     path: image,
     title: 'Random User API',
     url: 'https://react-random-user-api.netlify.app/',
   },
   {
-    id: 2,
+    id: 4,
     path: image1,
     title: 'Form Input',
     url: 'https://react-form-no-framewoek.netlify.app/',
   },
   {
-    id: 3,
+    id: 5,
     path: image2,
     title: 'Calculator App',
     url: 'https://llalvar.github.io/Calculator_App/',
   },
   {
-    id: 4,
+    id: 6,
     path: image3,
     title: 'ToDo App',
     url: 'https://llalvar.github.io/Frontend-Mentor_Todo-app/',
   },
   {
-    id: 5,
+    id: 7,
     path: image4,
     title: 'Splitter',
     url: 'https://llalvar.github.io/Ftontend-Mentor_tip-calculator-app/',
   },
   {
-    id: 6,
+    id: 8,
     path: image5,
     title: 'HTML, CSS Website',
     url: 'https://llalvar.github.io/htmlCss/',
   },
   {
-    id: 7,
+    id: 9,
     path: image6,
     title: 'Portfolio',
     url: 'https://llalvar.github.io/Portfolio/',
   },
   {
-    id: 8,
+    id: 10,
     path: image7,
     title: 'GPT-3',
     url: 'https://gpt3-react-mastery.netlify.app/',
-  },
-  {
-    id: 8,
-    path: image8,
-    title: 'Pizza Ordering App',
-    url: 'https://nextjs-pizza-ordering-app.netlify.app/',
   },
 ]
 
