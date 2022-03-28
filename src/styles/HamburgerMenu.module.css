@@ -11,6 +11,10 @@
   transition: 300ms;
 }
 
+.title {
+  pointer-events: none;
+}
+
 @media screen and (min-width: 700px) {
   .hamburgerMenu {
     display: none;
@@ -18,8 +22,8 @@
 }
 
 .hamburgerMenuBg {
-  transform: scale(0.35, 0.55);
   position: absolute;
+  transform: scale(0.35, 0.55);
   z-index: -1;
   top: -42px;
   right: -100px;
@@ -46,8 +50,6 @@
 
 .hamburgerMenuOpened .hamburgerMenuBg {
   transform: scale(1.6, 3.2);
-  position: absolute;
-  z-index: -1;
   top: 25px;
   left: 0px;
 }

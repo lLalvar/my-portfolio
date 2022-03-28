@@ -2,9 +2,9 @@ import 'aos/dist/aos.css'
 import styles from '../styles/PortfolioCard.module.css'
 import { Colors } from '../helpers/Colors'
 
-const PortfolioCard = ({ img, title, url }) => {
+const PortfolioCard = ({ img, title, url, AOSDelay }) => {
   return (
-    <div data-aos='fade-up' data-aos-duration='1000' className={styles.card}>
+    <div data-aos='zoom-in' data-aos-delay={AOSDelay} className={styles.card}>
       <a href={url} target='_blank'>
         <div
           className={styles.overlay}

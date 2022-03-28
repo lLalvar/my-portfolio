@@ -5,9 +5,9 @@ import FooterItem from './FooterItem'
 import { Colors } from '../helpers/Colors'
 import image from '../assets/map.jpg'
 
-const Footer = () => {
+const Footer = ({ footerRef }) => {
   return (
-    <footer id='footer'>
+    <footer ref={footerRef}>
       <div className={styles.container}>
         <div className={styles.svg}>
           <svg

@@ -3,26 +3,26 @@ import { FaFacebook } from 'react-icons/fa'
 import { TiSocialLinkedinCircular } from 'react-icons/ti'
 import { AiFillTwitterCircle } from 'react-icons/ai'
 import styles from '../styles/Main.module.css'
-import AOS from 'aos'
+import { useEffect } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import MainBg from '../components/MainBg'
 
-AOS.init()
-
 const Main = () => {
+  useEffect(() => {
+    Aos.init()
+  }, [])
+
   return (
     <main className={styles.container}>
       <MainBg />
-      <div
-        data-aos='fade-down'
-        data-aos-duration='1500'
-        className={styles.text}
-      >
+      <div data-aos='fade-up' data-aos-duration='2000' className={styles.text}>
         <h1 className={styles.title}>
           Hi! I Am <br /> <span>Lalvar</span>
         </h1>
         <p className={styles.desc}>I am a Front-end React developer.</p>
       </div>
-      <div className={styles.hero} data-aos='fade-up' data-aos-duration='1500'>
+      <div className={styles.hero} data-aos='zoom-in' data-aos-duration='2000'>
         <div className={styles.img}>
           <img src={HeroImg} alt='hero image' />
         </div>

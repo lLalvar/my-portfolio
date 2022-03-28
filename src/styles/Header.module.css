@@ -32,17 +32,18 @@
 }
 
 .navItem {
+  display: grid;
   font-size: 1.125rem;
-  transition: 300ms;
   cursor: pointer;
+  z-index: 2;
 }
 
-.navItem a {
-  color: white;
+.title {
   transition: 300ms ease-in-out;
+  pointer-events: none;
 }
 
-.navItem a:hover {
+.navItem:hover .title {
   color: var(--primary);
 }
 
@@ -50,7 +51,7 @@
   width: 100%;
 }
 
-.navItem.active {
+.navItem.active .title {
   color: var(--primary);
 }
 
@@ -59,6 +60,7 @@
   height: 3px;
   background-color: var(--primary);
   transition: 300ms;
+  pointer-events: none;
 }
 
 .navItem:hover .underline {

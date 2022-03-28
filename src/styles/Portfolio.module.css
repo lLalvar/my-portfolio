@@ -1,6 +1,7 @@
 .container {
   position: relative;
   margin-top: 8rem;
+  scroll-margin: 100px;
 }
 
 .title {
@@ -60,16 +61,19 @@
 }
 
 .cards {
-  width: 90vw;
-  max-width: 1440px;
-  gap: 2rem;
-  padding: 5px 0;
   display: grid;
+  gap: 2rem;
+  max-width: 1440px;
+  width: 90vw;
+  padding: 5px 0;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
 }
 
-@media screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
+  .container {
+    scroll-margin: 80px;
+  }
   .title {
     transform: translateY(-40px);
     font-size: 4rem;
@@ -79,7 +83,11 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+  .container {
+    scroll-margin: 60px;
+  }
+
   .title {
     transform: translateY(-30px);
     font-size: 3rem;
@@ -91,7 +99,10 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
+  .container {
+    scroll-margin: 40px;
+  }
   .title {
     transform: translateY(-20px);
     font-size: 2rem;

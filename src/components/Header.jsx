@@ -5,7 +5,16 @@ import { Colors } from '../helpers/Colors'
 
 import 'aos/dist/aos.css'
 
-const Header = () => {
+const Header = ({ portfolioRef, footerRef }) => {
+  const scrollToElement = (e) => {
+    const id = e.target.id
+    if (id === 'portfolioBtn') {
+      portfolioRef.current.scrollIntoView()
+    } else if (id === 'footerBtn') {
+      footerRef.current.scrollIntoView()
+    }
+  }
+
   return (
     <header className={styles.container}>
       <div className={styles.logo}>
@@ -49,23 +58,27 @@ const Header = () => {
       </div>
       <nav>
         <ScrollTopBtn />
-        <HamburgerMenu />
+        <HamburgerMenu portfolioRef={portfolioRef} footerRef={footerRef} />
         <div className={styles.navContainer}>
           <div className={`${styles.navItem} ${styles.active}`}>
-            <h3>Home</h3>
+            <h3 className={styles.title}>Home</h3>
             <div className={`${styles.underline} ${styles.active}`}></div>
           </div>
-          <div className={styles.navItem}>
-            <a href='#portfolio'>
-              <h3>Portfolio</h3>
-              <div className={styles.underline}></div>
-            </a>
+          <div
+            onClick={(e) => scrollToElement(e)}
+            id='portfolioBtn'
+            className={styles.navItem}
+          >
+            <h3 className={styles.title}>Portfolio</h3>
+            <div className={styles.underline}></div>
           </div>
-          <div className={styles.navItem}>
-            <a href='#footer'>
-              <h3>Contact</h3>
-              <div className={styles.underline}></div>
-            </a>
+          <div
+            onClick={(e) => scrollToElement(e)}
+            id='footerBtn'
+            className={styles.navItem}
+          >
+            <h3 className={styles.title}>Contact</h3>
+            <div className={styles.underline}></div>
           </div>
         </div>
       </nav>

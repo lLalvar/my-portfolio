@@ -8,12 +8,6 @@
   color: var(--primary);
 }
 
-@media screen and (min-width: 1500px) {
-  .returnBtn {
-    right: calc(50% - 750px);
-  }
-}
-
 .returnBtn.hidden {
   opacity: 0;
   z-index: -10;

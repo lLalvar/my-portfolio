@@ -2,10 +2,19 @@ import { useState } from 'react'
 import styles from '../styles/HamburgerMenu.module.css'
 import Hamburger from './Hamburger'
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({ portfolioRef, footerRef }) => {
   const [hamburgerMenu, setHamburgerMenu] = useState(false)
   const hamburgerMenuHandler = () => {
     setHamburgerMenu(!hamburgerMenu)
+  }
+
+  const scrollToElement = (e) => {
+    const id = e.target.id
+    if (id === 'hamburgerPortfolioBtn') {
+      portfolioRef.current.scrollIntoView()
+    } else if (id === 'hamburgerFooterBtn') {
+      footerRef.current.scrollIntoView()
+    }
   }
   return (
     <div
@@ -25,28 +34,30 @@ const HamburgerMenu = () => {
               : `${styles.hamburgerNavItems} ${styles.hamburgerNavHome} ${styles.hamburgerNavOpened}`
           }
         >
-          Home
+          <h4 className={styles.title}>Home</h4>
         </div>
-        <a
-          href='#portfolio'
+        <div
+          onClick={(e) => scrollToElement(e)}
+          id='hamburgerPortfolioBtn'
           className={
             !hamburgerMenu
               ? `${styles.hamburgerNavItems} ${styles.hamburgerNavHome}`
               : `${styles.hamburgerNavItems} ${styles.hamburgerNavPortfolio} ${styles.hamburgerNavOpened}`
           }
         >
-          <div>Portfolio</div>
-        </a>
-        <a
-          href='#footer'
+          <h4 className={styles.title}>Portfolio</h4>
+        </div>
+        <div
+          onClick={(e) => scrollToElement(e)}
+          id='hamburgerFooterBtn'
           className={
             !hamburgerMenu
               ? `${styles.hamburgerNavItems} ${styles.hamburgerNavHome}`
               : `${styles.hamburgerNavItems} ${styles.hamburgerNavContact} ${styles.hamburgerNavOpened}`
           }
         >
-          <div>Contact</div>
-        </a>
+          <h4 className={styles.title}>Contact</h4>
+        </div>
       </div>
       <svg
         className={styles.hamburgerMenuBg}

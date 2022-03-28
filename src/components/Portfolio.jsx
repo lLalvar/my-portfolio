@@ -20,72 +20,85 @@ const cards = [
   {
     id: 1,
     path: image9,
+    AOSDelay: 0,
     title: 'React Recipe App',
     url: 'https://lalvar-react-recipe-app.netlify.app/',
   },
   {
     id: 2,
+    AOSDelay: 200,
     path: image8,
     title: 'Pizza Ordering App',
     url: 'https://nextjs-pizza-ordering-app.netlify.app/',
   },
   {
     id: 3,
+    AOSDelay: 400,
     path: image,
     title: 'Random User API',
     url: 'https://react-random-user-api.netlify.app/',
   },
   {
     id: 4,
+    AOSDelay: 0,
     path: image1,
     title: 'Form Input',
     url: 'https://react-form-no-framewoek.netlify.app/',
   },
   {
     id: 5,
+    AOSDelay: 200,
     path: image2,
     title: 'Calculator App',
     url: 'https://llalvar.github.io/Calculator_App/',
   },
   {
     id: 6,
+    AOSDelay: 400,
     path: image3,
     title: 'ToDo App',
     url: 'https://llalvar.github.io/Frontend-Mentor_Todo-app/',
   },
   {
     id: 7,
+    AOSDelay: 0,
     path: image4,
     title: 'Splitter',
     url: 'https://llalvar.github.io/Ftontend-Mentor_tip-calculator-app/',
   },
   {
     id: 8,
+    AOSDelay: 200,
     path: image5,
-    title: 'HTML, CSS Website',
-    url: 'https://llalvar.github.io/htmlCss/',
+    title: 'Bootstrap Website',
+    url: 'https://lalvar-bootstrap-website.netlify.app/',
   },
   {
     id: 9,
+    AOSDelay: 400,
     path: image6,
     title: 'Portfolio',
     url: 'https://llalvar.github.io/Portfolio/',
   },
   {
     id: 10,
+    AOSDelay: 0,
     path: image7,
     title: 'GPT-3',
     url: 'https://gpt3-react-mastery.netlify.app/',
   },
 ]
 
-const Portfolio = () => {
+const Portfolio = ({ portfolioRef }) => {
   useEffect(() => {
-    Aos.init({ duration: 5000 })
+    Aos.init({
+      duration: 1500,
+      once: true,
+    })
   }, [])
 
   return (
-    <div className={styles.container} id='portfolio'>
+    <div className={styles.container} ref={portfolioRef}>
       <div className={styles.wave}>
         <svg
           width='300'
@@ -107,7 +120,7 @@ const Portfolio = () => {
         <div className={styles.title}>
           <h3
             className={styles.cardsTitle}
-            data-aos='fade-down'
+            data-aos='fade-up'
             data-aos-duration='1500'
           >
             Portfolio
@@ -121,6 +134,7 @@ const Portfolio = () => {
               img={card.path}
               title={card.title}
               url={card.url}
+              AOSDelay={card.AOSDelay}
             />
           ))}
         </div>

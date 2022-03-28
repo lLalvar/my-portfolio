@@ -34,38 +34,39 @@ const ScrollTopBtn = () => {
 
   return (
     <div
+      onClick={() => {
+        window.scrollTo(0, 0)
+      }}
       className={`${
         scrollPosition > 400
           ? `${styles.returnBtn}`
           : `${styles.returnBtn} ${styles.hidden}`
       }`}
     >
-      <a href='#'>
-        <button
-          className={styles.returnBtn}
-          onMouseEnter={() => setActive(true)}
-          onMouseLeave={() => setActive(false)}
+      <button
+        className={styles.returnBtn}
+        onMouseEnter={() => setActive(true)}
+        onMouseLeave={() => setActive(false)}
+      >
+        <div
+          className={`${
+            active
+              ? `${styles.returnBtn1} ${styles.active}`
+              : `${styles.returnBtn1}`
+          }`}
         >
-          <div
-            className={`${
-              active
-                ? `${styles.returnBtn1} ${styles.active}`
-                : `${styles.returnBtn1}`
-            }`}
-          >
-            <RiArrowUpSLine />
-          </div>
-          <div
-            className={`${
-              active
-                ? `${styles.returnBtn2} ${styles.active}`
-                : `${styles.returnBtn2}`
-            }`}
-          >
-            <RiArrowUpSLine />
-          </div>
-        </button>
-      </a>
+          <RiArrowUpSLine />
+        </div>
+        <div
+          className={`${
+            active
+              ? `${styles.returnBtn2} ${styles.active}`
+              : `${styles.returnBtn2}`
+          }`}
+        >
+          <RiArrowUpSLine />
+        </div>
+      </button>
     </div>
   )
 }
