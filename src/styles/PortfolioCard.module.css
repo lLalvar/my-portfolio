@@ -21,6 +21,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
+  background-color: var(--primary);
   left: 0;
   bottom: 0;
   width: 100%;
@@ -38,6 +39,10 @@
   transform: translateY(-80px);
 }
 
+.wave path {
+  fill: var(--primary);
+}
+
 @media screen and (max-width: 1000px) {
   .wave {
     transform: translateY(-55px);
@@ -49,6 +54,7 @@
 }
 
 .title {
+  color: var(--secondary);
   position: absolute;
   transform: translateY(-20px);
 }

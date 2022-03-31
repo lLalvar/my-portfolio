@@ -1,7 +1,8 @@
 :root {
-  --gradient: linear-gradient(to left, var(--secondary), #313362);
-  --primary: hsl(19, 74%, 60%);
-  --secondary: #101133;
+  --gradient: linear-gradient(to left, var(--bg), #313362);
+  --primary: #e47d4e;
+  ---secondary: #fff;
+  --bg: #101133;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Sansita+Swashed&display=swap');
@@ -61,7 +62,7 @@ select {
 
 body {
   background: var(--gradient);
-  color: #fff;
+  color: var(---secondary);
   overflow-x: hidden;
 }
 

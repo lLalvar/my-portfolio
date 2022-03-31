@@ -13,6 +13,10 @@
   transform: rotate(180deg);
 }
 
+.svg path {
+  fill: var(--bg);
+}
+
 .svg svg {
   transform: scale(1) translate(300px, 20px);
 }

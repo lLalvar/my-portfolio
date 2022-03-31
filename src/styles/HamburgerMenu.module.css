@@ -70,8 +70,8 @@
   flex-direction: column;
   gap: 5px;
   align-items: flex-end;
-  color: var(--secondary);
-  color: #fff;
+  color: var(--bg);
+  color: var(---secondary);
   font-size: 1.25rem;
   font-weight: bold;
   position: absolute;

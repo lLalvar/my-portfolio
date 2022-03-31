@@ -14,7 +14,7 @@
 }
 
 .returnBtn button {
-  background-color: #fff;
+  background-color: var(---secondary);
   cursor: pointer;
   opacity: 0.9;
   border: none;

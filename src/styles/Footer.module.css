@@ -1,5 +1,5 @@
 footer {
-  background-color: var(--secondary);
+  background-color: var(--bg);
 }
 
 .container {
@@ -33,7 +33,7 @@ footer {
 }
 
 .infoWrapper {
-  color: white;
+  color: var(---secondary);
 }
 
 .infoWrapper:hover {
@@ -51,7 +51,7 @@ footer {
 .img {
   border-radius: 20px;
   position: relative;
-  box-shadow: 0px 0px 0 6px white;
+  box-shadow: 0px 0px 0 6px var(---secondary);
   transition: 300ms ease-in-out;
   margin-top: 1rem;
 }
@@ -81,13 +81,18 @@ footer {
 .svg {
   position: absolute;
   top: 10px;
+}
+
+.svg path {
+  fill: var(--primary);
+}
+
+.svg1 {
   left: 50px;
   transform: scale(0.8);
 }
 
-.svg1 {
-  position: absolute;
-  top: 10px;
+.svg2 {
   right: 300px;
   transform: rotate(180deg) scale(3);
 }

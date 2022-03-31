@@ -12,6 +12,10 @@
   z-index: -2;
 }
 
+.svg path {
+  fill: var(--primary);
+}
+
 .svg4 svg {
   transform: translate(0px, -100px) scale(1.4);
 }

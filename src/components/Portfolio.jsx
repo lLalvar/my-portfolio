@@ -14,7 +14,6 @@ import image7 from '../assets/cardImages/image7.png'
 import image8 from '../assets/cardImages/image8.png'
 import image9 from '../assets/cardImages/image9.png'
 import PortfolioBg from './PortfolioBg'
-import { Colors } from '../helpers/Colors'
 
 const cards = [
   {
@@ -109,14 +108,11 @@ const Portfolio = ({ portfolioRef }) => {
         >
           <path
             d='M0 34.7884C60 34.7884 40.5 -11.7774 95 6.0902C136 23.5 140.324 -0.589757 160 0.155429C195.5 1.49991 172 13.0387 223 6.09015C257.48 1.39244 247 34.7884 300 34.7884C200 34.7884 100 34.7884 0 34.7884Z'
-            fill={Colors.primary}
+            fill='#fff'
           />
         </svg>
       </div>
-      <div
-        className={styles.cardsWrapper}
-        style={{ backgroundColor: `${Colors.primary}` }}
-      >
+      <div className={styles.cardsWrapper}>
         <div className={styles.title}>
           <h3
             className={styles.cardsTitle}
