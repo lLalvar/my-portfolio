@@ -1,5 +1,6 @@
 import { FaFacebook, FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import { IoLocationSharp } from 'react-icons/io5'
+import { SiUpwork } from 'react-icons/si'
 import styles from '../styles/Footer.module.css'
 import FooterItem from './FooterItem'
 import image from '../assets/map.jpg'
@@ -41,6 +42,15 @@ const Footer = ({ footerRef }) => {
         <div className={styles.wrapper}>
           <div className={styles.itemsWrapper}>
             <h4 className={styles.title}>Social Media</h4>
+            <a href='https://github.com/lLalvar' target='_blank'>
+              <FooterItem title={'Github'} icon={<FaGithub />} />
+            </a>
+            <a
+              href='https://www.upwork.com/freelancers/~01a6676fe3936df9cb?viewMode=1'
+              target='_blank'
+            >
+              <FooterItem title={'Upwork'} icon={<SiUpwork />} />
+            </a>
             <a href='https://www.linkedin.com/in/lalvar/' target='_blank'>
               <FooterItem title={'LinkedIn'} icon={<FaLinkedinIn />} />
             </a>
@@ -52,9 +62,6 @@ const Footer = ({ footerRef }) => {
               target='_blank'
             >
               <FooterItem title={'Facebook'} icon={<FaFacebook />} />
-            </a>
-            <a href='https://github.com/lLalvar' target='_blank'>
-              <FooterItem title={'Github'} icon={<FaGithub />} />
             </a>
           </div>
           <div className={styles.locationContainer}>

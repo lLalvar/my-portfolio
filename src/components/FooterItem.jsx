@@ -3,7 +3,7 @@ import styles from '../styles/Footer.module.css'
 const FooterItem = ({ title, icon }) => {
   return (
     <div className={styles.infoWrapper}>
-      <div>{icon}</div>
+      <div className={styles.icon}>{icon}</div>
       <p>{title}</p>
     </div>
   )

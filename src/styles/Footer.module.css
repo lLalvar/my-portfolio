@@ -40,6 +40,13 @@ footer {
   color: var(--primary);
 }
 
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .locationWrapper {
   cursor: pointer;
 }
