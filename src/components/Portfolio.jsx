@@ -100,8 +100,7 @@ const Portfolio = ({ portfolioRef }) => {
   useEffect(() => {
     Aos.init({
       duration: 1500,
-      once: true,
-      useClassNames: false,
+      once: false,
     })
   }, [])
 

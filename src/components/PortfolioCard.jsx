@@ -3,12 +3,7 @@ import styles from '../styles/PortfolioCard.module.css'
 
 const PortfolioCard = ({ img, title, url, AOSDelay }) => {
   return (
-    <div
-      data-aos='zoom-in'
-      data-aos-delay={AOSDelay}
-      data-aos-offset={300}
-      className={styles.card}
-    >
+    <div data-aos='zoom-in' data-aos-delay={AOSDelay} className={styles.card}>
       <a href={url} target='_blank'>
         <div className={styles.overlay}>
           <div className={styles.wave}>
