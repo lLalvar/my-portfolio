@@ -13,75 +13,83 @@ import image6 from '../assets/cardImages/image6.png'
 import image7 from '../assets/cardImages/image7.png'
 import image8 from '../assets/cardImages/image8.png'
 import image9 from '../assets/cardImages/image9.png'
+import image10 from '../assets/cardImages/image10.jpg'
 import PortfolioBg from './PortfolioBg'
 
 const cards = [
   {
+    id: 11,
+    path: image10,
+    AOSDelay: 0,
+    title: 'Cryptoverse',
+    url: 'https://lalvar-cryptoverse.netlify.app/',
+  },
+  {
     id: 1,
     path: image9,
-    AOSDelay: 0,
+    AOSDelay: 200,
     title: 'React Recipe App',
     url: 'https://lalvar-react-recipe-app.netlify.app/',
   },
   {
     id: 2,
-    AOSDelay: 200,
+    AOSDelay: 400,
     path: image8,
     title: 'Pizza Ordering App',
     url: 'https://nextjs-pizza-ordering-app.netlify.app/',
   },
   {
     id: 3,
-    AOSDelay: 400,
+    AOSDelay: 0,
     path: image,
     title: 'Random User API',
     url: 'https://react-random-user-api.netlify.app/',
   },
   {
     id: 4,
-    AOSDelay: 0,
+    AOSDelay: 200,
     path: image1,
     title: 'Form Input',
     url: 'https://react-form-no-framewoek.netlify.app/',
   },
   {
     id: 5,
-    AOSDelay: 200,
+    AOSDelay: 400,
     path: image2,
     title: 'Calculator App',
     url: 'https://llalvar.github.io/Calculator_App/',
   },
   {
     id: 6,
-    AOSDelay: 400,
+    AOSDelay: 0,
     path: image3,
     title: 'ToDo App',
     url: 'https://llalvar.github.io/Frontend-Mentor_Todo-app/',
   },
   {
     id: 7,
-    AOSDelay: 0,
+    AOSDelay: 200,
     path: image4,
     title: 'Splitter',
     url: 'https://llalvar.github.io/Ftontend-Mentor_tip-calculator-app/',
   },
   {
     id: 8,
-    AOSDelay: 200,
+    AOSDelay: 400,
     path: image5,
     title: 'Bootstrap Website',
     url: 'https://lalvar-bootstrap-website.netlify.app/',
   },
   {
     id: 9,
-    AOSDelay: 400,
+    AOSDelay: 0,
     path: image6,
     title: 'Portfolio',
     url: 'https://llalvar.github.io/Portfolio/',
   },
   {
     id: 10,
-    AOSDelay: 0,
+    AOSDelay: 200,
     path: image7,
     title: 'GPT-3',
     url: 'https://gpt3-react-mastery.netlify.app/',

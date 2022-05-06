@@ -18,6 +18,7 @@
   scroll-behavior: smooth;
 }
 
+/* Remove background color when clicking on mobile */
 @media (any-hover: none) {
   * {
     cursor: none !important;
