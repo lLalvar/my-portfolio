@@ -101,6 +101,7 @@ const Portfolio = ({ portfolioRef }) => {
     Aos.init({
       duration: 1500,
       once: true,
+      useClassNames: false,
     })
   }, [])
 
