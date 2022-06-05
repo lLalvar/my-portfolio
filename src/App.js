@@ -3,11 +3,17 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Portfolio from './components/Portfolio'
 import Footer from './components/Footer'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function App() {
   const portfolioRef = useRef()
   const footerRef = useRef()
+
+  useEffect(() => {
+    Aos.init()
+  }, [])
 
   return (
     <div className='App'>
