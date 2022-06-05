@@ -12,7 +12,9 @@ function App() {
   const footerRef = useRef()
 
   useEffect(() => {
-    Aos.init()
+    Aos.init({
+      startEvent: 'DOMContentLoaded',
+    })
   }, [])
 
   // window.addEventListener('load', Aos.refresh)

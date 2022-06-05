@@ -5,10 +5,6 @@
   --bg: #101133;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Sansita+Swashed&display=swap');
 
 /* Box sizing rules */
