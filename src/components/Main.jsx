@@ -16,7 +16,7 @@ const Main = () => {
   return (
     <main className={styles.container}>
       <MainBg />
-      <div data-aos='fade-up' data-aos-duration='2000' className={styles.text}>
+      <div className={styles.text} data-aos='fade-up' data-aos-duration='2000'>
         <h1 className={styles.title}>
           Hi! I Am <br /> <span>Lalvar</span>
         </h1>

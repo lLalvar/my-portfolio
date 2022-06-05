@@ -1,6 +1,6 @@
 import PortfolioCard from './PortfolioCard'
 import Aos from 'aos'
-import 'aos/dist/aos.css'
+// import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 import styles from '../styles/Portfolio.module.css'
 import image from '../assets/cardImages/image.png'
@@ -97,12 +97,12 @@ const cards = [
 ]
 
 const Portfolio = ({ portfolioRef }) => {
-  useEffect(() => {
-    Aos.init({
-      duration: 1500,
-      once: false,
-    })
-  }, [])
+  // useEffect(() => {
+  //   Aos.init({
+  //     duration: 1500,
+  //     once: false,
+  //   })
+  // }, [])
 
   return (
     <div className={styles.container} ref={portfolioRef}>
