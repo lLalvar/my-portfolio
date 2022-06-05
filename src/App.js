@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     Aos.init({
-      startEvent: 'DOMContentLoaded',
+      initClassName: 'aos-init',
     })
   }, [])
 
