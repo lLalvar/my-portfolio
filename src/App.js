@@ -15,6 +15,8 @@ function App() {
     Aos.init()
   }, [])
 
+  window.addEventListener('load', Aos.refresh)
+
   return (
     <div className='App'>
       <Header portfolioRef={portfolioRef} footerRef={footerRef} />
