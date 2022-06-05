@@ -11,12 +11,12 @@ function App() {
   const portfolioRef = useRef()
   const footerRef = useRef()
 
-  // useEffect(() => {
-  //   Aos.init()
-  // }, [])
+  useEffect(() => {
+    Aos.init()
+  }, [])
 
   // window.addEventListener('load', Aos.refresh)
-  window.addEventListener('load', Aos.init())
+  // window.addEventListener('load', Aos.init())
 
   return (
     <div className='App'>
