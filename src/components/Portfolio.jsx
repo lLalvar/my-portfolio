@@ -1,7 +1,4 @@
 import PortfolioCard from './PortfolioCard'
-import Aos from 'aos'
-// import 'aos/dist/aos.css'
-import { useEffect } from 'react'
 import styles from '../styles/Portfolio.module.css'
 import image from '../assets/cardImages/image.png'
 import image1 from '../assets/cardImages/image1.png'
@@ -20,20 +17,20 @@ const cards = [
   {
     id: 11,
     path: image10,
-    AOSDelay: 0,
+    AOSDelay: `0 `,
     title: 'Cryptoverse',
     url: 'https://lalvar-cryptoverse.netlify.app/',
   },
   {
     id: 1,
     path: image9,
-    AOSDelay: 200,
+    AOSDelay: `200`,
     title: 'React Recipe App',
     url: 'https://lalvar-react-recipe-app.netlify.app/',
   },
   {
     id: 2,
-    AOSDelay: 400,
+    AOSDelay: `400`,
     path: image8,
     title: 'Pizza Ordering App',
     url: 'https://nextjs-pizza-ordering-app.netlify.app/',
@@ -97,13 +94,6 @@ const cards = [
 ]
 
 const Portfolio = ({ portfolioRef }) => {
-  // useEffect(() => {
-  //   Aos.init({
-  //     duration: 1500,
-  //     once: false,
-  //   })
-  // }, [])
-
   return (
     <div className={styles.container} ref={portfolioRef}>
       <div className={styles.wave}>

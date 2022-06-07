@@ -12,13 +12,39 @@ function App() {
   const footerRef = useRef()
 
   useEffect(() => {
-    Aos.init({
-      initClassName: 'aos-init',
-    })
+    Aos.init()
   }, [])
 
-  // window.addEventListener('load', Aos.refresh)
-  // window.addEventListener('load', Aos.init())
+  const throttle = (func, limit) => {
+    let inThrottle
+    return function () {
+      const args = arguments
+      const context = this
+      if (!inThrottle) {
+        func.apply(context, args)
+        inThrottle = true
+        setTimeout(() => (inThrottle = false), limit)
+      }
+    }
+  }
+
+  function handleScroll() {
+    Aos.init({
+      duration: 1500,
+    })
+  }
+
+  handleScroll = throttle(handleScroll, 100)
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  window.addEventListener('load', Aos.refresh)
 
   return (
     <div className='App'>
