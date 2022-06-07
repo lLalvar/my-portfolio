@@ -15,6 +15,11 @@ function App() {
     Aos.init()
   }, [])
 
+  // {
+  //     duration: 1500,
+  //     once: true,
+  //   }
+
   const throttle = (func, limit) => {
     let inThrottle
     return function () {
@@ -31,6 +36,7 @@ function App() {
   function handleScroll() {
     Aos.init({
       duration: 1500,
+      once: true,
     })
   }
 
