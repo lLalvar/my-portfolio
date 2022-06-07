@@ -10,6 +10,7 @@
 
 .img {
   width: 600px;
+  height: 578px;
 }
 
 .text {
@@ -118,6 +119,7 @@
 @media screen and (max-width: 1050px) {
   .img {
     width: 400px;
+    height: 385px;
   }
 
   .twitter {
@@ -200,6 +202,7 @@
 
   .img {
     width: 320px;
+    height: 308px;
   }
 
   .cardsTitle {

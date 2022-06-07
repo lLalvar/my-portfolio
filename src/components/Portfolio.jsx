@@ -120,7 +120,7 @@ const Portfolio = ({ portfolioRef }) => {
             Portfolio
           </h3>
         </div>
-        <PortfolioBg />
+        {/* <PortfolioBg /> */}
         <div className={styles.cards}>
           {cards.map((card) => (
             <PortfolioCard
