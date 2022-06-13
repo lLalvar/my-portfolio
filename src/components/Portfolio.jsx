@@ -1,16 +1,16 @@
 import PortfolioCard from './PortfolioCard'
 import styles from '../styles/Portfolio.module.css'
-import image from '../assets/cardImages/image.png'
-import image1 from '../assets/cardImages/image1.png'
-import image2 from '../assets/cardImages/image2.png'
-import image3 from '../assets/cardImages/image3.png'
-import image4 from '../assets/cardImages/image4.png'
-import image5 from '../assets/cardImages/image5.png'
-import image6 from '../assets/cardImages/image6.png'
-import image7 from '../assets/cardImages/image7.png'
-import image8 from '../assets/cardImages/image8.png'
-import image9 from '../assets/cardImages/image9.png'
-import image10 from '../assets/cardImages/image10.jpg'
+import image from '../assets/card-images/image.png'
+import image1 from '../assets/card-images/image1.png'
+import image2 from '../assets/card-images/image2.png'
+import image3 from '../assets/card-images/image3.png'
+import image4 from '../assets/card-images/image4.png'
+import image5 from '../assets/card-images/image5.png'
+import image6 from '../assets/card-images/image6.png'
+import image7 from '../assets/card-images/image7.png'
+import image8 from '../assets/card-images/image8.png'
+import image9 from '../assets/card-images/image9.png'
+import image10 from '../assets/card-images/image10.jpg'
 import PortfolioBg from './PortfolioBg'
 
 const cards = [
@@ -120,7 +120,7 @@ const Portfolio = ({ portfolioRef }) => {
             Portfolio
           </h3>
         </div>
-        {/* <PortfolioBg /> */}
+        <PortfolioBg />
         <div className={styles.cards}>
           {cards.map((card) => (
             <PortfolioCard

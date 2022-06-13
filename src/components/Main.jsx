@@ -9,13 +9,13 @@ const Main = () => {
   return (
     <main className={styles.container}>
       <MainBg />
-      <div className={styles.text} data-aos='fade-up' data-aos-duration='2000'>
+      <div className={styles.text}>
         <h1 className={styles.title}>
           Hi! I Am <br /> <span>Lalvar</span>
         </h1>
         <p className={styles.desc}>I am a Front-end React developer.</p>
       </div>
-      <div className={styles.hero} data-aos='zoom-in' data-aos-duration='2000'>
+      <div className={styles.hero}>
         <div className={styles.img}>
           <img src={HeroImg} alt='hero image' />
         </div>

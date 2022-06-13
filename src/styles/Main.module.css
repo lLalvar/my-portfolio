@@ -15,11 +15,24 @@
 
 .text {
   max-width: 300px;
+  animation: slideUp 1.5s ease-out;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .title {
   font-size: 4.5rem;
   line-height: 1.2;
+  animation: slideUp 1.5s ease-out;
 }
 
 .title span {
@@ -32,6 +45,18 @@
 
 .hero {
   position: relative;
+  animation: scaleUp 1.5s ease-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .iconWrapper {
