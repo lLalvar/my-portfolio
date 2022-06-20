@@ -6,7 +6,7 @@ import image2 from '../assets/card-images/image2.png'
 import image3 from '../assets/card-images/image3.png'
 import image4 from '../assets/card-images/image4.png'
 import image5 from '../assets/card-images/image5.png'
-import image6 from '../assets/card-images/image6.png'
+import image6 from '../assets/card-images/image6.jpg'
 import image7 from '../assets/card-images/image7.png'
 import image8 from '../assets/card-images/image8.png'
 import image9 from '../assets/card-images/image9.png'
@@ -81,8 +81,8 @@ const cards = [
     id: 9,
     AOSDelay: 0,
     path: image6,
-    title: 'Portfolio',
-    url: 'https://llalvar.github.io/Portfolio/',
+    title: 'Cocktail Website',
+    url: 'https://lalvar-vuejs-cocktial.netlify.app/',
   },
   {
     id: 10,
