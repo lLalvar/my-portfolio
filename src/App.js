@@ -28,14 +28,13 @@ function App() {
     }
   }
 
-  function handleScroll() {
+  const handleScroll = throttle(() => {
     Aos.init({
       duration: 1500,
       once: true,
     })
-  }
-
-  handleScroll = throttle(handleScroll, 100)
+    console.log('hi')
+  }, 100)
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -43,7 +42,7 @@ function App() {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [handleScroll])
 
   window.addEventListener('load', Aos.refresh)
 
