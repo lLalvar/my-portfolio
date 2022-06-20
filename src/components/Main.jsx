@@ -17,7 +17,7 @@ const Main = () => {
       </div>
       <div className={styles.hero}>
         <div className={styles.img}>
-          <img src={HeroImg} alt='hero image' />
+          <img src={HeroImg} alt='hero' />
         </div>
         <a href='https://twitter.com/ILalvar' target='_blank' rel='noreferrer'>
           <div className={`${styles.twitterWrapper} ${styles.iconWrapper}`}>

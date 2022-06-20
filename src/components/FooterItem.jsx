@@ -2,7 +2,7 @@ import styles from '../styles/Footer.module.css'
 
 const FooterItem = ({ title, icon, link }) => {
   return (
-    <a href={link} target='_blank'>
+    <a href={link} target='_blank' rel='noreferrer'>
       <div className={styles.infoWrapper}>
         <div className={styles.icon}>{icon}</div>
         <p>{title}</p>

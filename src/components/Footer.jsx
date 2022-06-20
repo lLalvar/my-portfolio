@@ -54,6 +54,7 @@ const Footer = ({ footerRef }) => {
               <a
                 href='https://www.google.com/maps/place/Yerevan,+Armenia/@40.1733279,44.5233817,10.75z/data=!4m5!3m4!1s0x406aa2dab8fc8b5b:0x3d1479ae87da526a!8m2!3d40.1872023!4d44.515209'
                 target='_blank'
+                rel='noreferrer'
               >
                 <img className={styles.img} src={image} alt='Location on Map' />
               </a>

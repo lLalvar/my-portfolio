@@ -17,12 +17,10 @@ const ScrollTopBtn = () => {
     }
   }
 
-  function handleScroll() {
+  const handleScroll = debounce(() => {
     const position = window.pageYOffset
     setScrollPosition(position)
-  }
-
-  handleScroll = debounce(handleScroll, 100)
+  }, 100)
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -30,7 +28,7 @@ const ScrollTopBtn = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [handleScroll])
 
   return (
     <div
