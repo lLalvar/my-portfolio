@@ -20,6 +20,7 @@ const cards = [
     AOSDelay: `0 `,
     title: 'Cryptoverse',
     url: 'https://lalvar-cryptoverse.netlify.app/',
+    githubUrl: 'https://github.com/lLalvar/cryptoverse',
   },
   {
     id: 1,
@@ -27,6 +28,7 @@ const cards = [
     AOSDelay: `200`,
     title: 'React Recipe App',
     url: 'https://lalvar-react-recipe-app.netlify.app/',
+    githubUrl: 'https://github.com/lLalvar/React-Recip-App',
   },
   {
     id: 2,
@@ -34,6 +36,7 @@ const cards = [
     path: image8,
     title: 'Pizza Ordering App',
     url: 'https://nextjs-pizza-ordering-app.netlify.app/',
+    githubUrl: 'https://github.com/lLalvar/Pizza-Ordering-App',
   },
   {
     id: 3,
@@ -41,6 +44,7 @@ const cards = [
     path: image,
     title: 'Random User API',
     url: 'https://react-random-user-api.netlify.app/',
+    githubUrl: 'https://github.com/lLalvar/React-random-user-api',
   },
   {
     id: 4,
@@ -48,6 +52,7 @@ const cards = [
     path: image1,
     title: 'Form Input',
     url: 'https://react-form-no-framewoek.netlify.app/',
+    githubUrl: 'https://github.com/lLalvar/React-form_no-framework',
   },
   {
     id: 5,
@@ -55,6 +60,7 @@ const cards = [
     path: image2,
     title: 'Calculator App',
     url: 'https://llalvar.github.io/Calculator_App/',
+    githubUrl: 'https://github.com/lLalvar/Calculator_App',
   },
   {
     id: 6,
@@ -62,6 +68,7 @@ const cards = [
     path: image3,
     title: 'ToDo App',
     url: 'https://llalvar.github.io/Frontend-Mentor_Todo-app/',
+    githubUrl: 'https://github.com/lLalvar/Frontend-Mentor_Todo-app',
   },
   {
     id: 7,
@@ -69,6 +76,7 @@ const cards = [
     path: image4,
     title: 'Splitter',
     url: 'https://llalvar.github.io/Ftontend-Mentor_tip-calculator-app/',
+    githubUrl: 'https://github.com/lLalvar/Ftontend-Mentor_tip-calculator-app',
   },
   {
     id: 8,
@@ -76,6 +84,7 @@ const cards = [
     path: image5,
     title: 'Bootstrap Website',
     url: 'https://lalvar-bootstrap-website.netlify.app/',
+    githubUrl: 'https://github.com/lLalvar/bootstrap-website',
   },
   {
     id: 9,
@@ -83,6 +92,7 @@ const cards = [
     path: image6,
     title: 'Cocktail Website',
     url: 'https://lalvar-vuejs-cocktial.netlify.app/',
+    githubUrl: 'https://github.com/lLalvar/Vue.js-Cocktail-website',
   },
   {
     id: 10,
@@ -90,6 +100,7 @@ const cards = [
     path: image7,
     title: 'GPT-3',
     url: 'https://gpt3-react-mastery.netlify.app/',
+    githubUrl: 'https://github.com/lLalvar/gpt3',
   },
 ]
 
@@ -128,6 +139,7 @@ const Portfolio = ({ portfolioRef }) => {
               img={card.path}
               title={card.title}
               url={card.url}
+              githubUrl={card.githubUrl}
               AOSDelay={card.AOSDelay}
             />
           ))}

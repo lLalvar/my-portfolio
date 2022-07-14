@@ -91,6 +91,12 @@
     padding-bottom: 2rem;
   }
 }
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
 
 @media (max-width: 768px) {
   .container {
@@ -100,11 +106,6 @@
   .title {
     transform: translateY(-20px);
     font-size: 3rem;
-  }
-
-  .cards {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
   }
 }
 

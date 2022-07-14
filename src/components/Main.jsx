@@ -13,7 +13,7 @@ const Main = () => {
         <h1 className={styles.title}>
           Hi! I Am <br /> <span>Lalvar</span>
         </h1>
-        <p className={styles.desc}>I am a Wev Developer developer.</p>
+        <p className={styles.desc}>I am a Web Developer developer.</p>
       </div>
       <div className={styles.hero}>
         <div className={styles.img}>

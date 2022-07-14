@@ -1,10 +1,19 @@
 import 'aos/dist/aos.css'
 import styles from '../styles/PortfolioCard.module.css'
+import { FaGithub } from 'react-icons/fa'
 
-const PortfolioCard = ({ img, title, url, AOSDelay }) => {
+const PortfolioCard = ({ img, title, url, AOSDelay, githubUrl }) => {
+  const handleClick = () => {
+    console.log('clicked')
+  }
   return (
     <div data-aos='zoom-in' data-aos-delay={AOSDelay} className={styles.card}>
-      <a href={url} target='_blank'>
+      <a href={githubUrl} target='_blank' rel='noreferrer'>
+        <div onClick={handleClick} className={styles.githubIcon}>
+          <FaGithub />
+        </div>
+      </a>
+      <a href={url} target='_blank' rel='noreferrer'>
         <div className={styles.overlay}>
           <div className={styles.wave}>
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'>
@@ -18,7 +27,7 @@ const PortfolioCard = ({ img, title, url, AOSDelay }) => {
             <h4>{title}</h4>
           </div>
         </div>
-        <img src={img} alt='my work image' />
+        <img src={img} alt={styles.title} />
       </a>
     </div>
   )
