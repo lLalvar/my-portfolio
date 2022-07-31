@@ -33,7 +33,6 @@ function App() {
       duration: 1500,
       once: true,
     })
-    console.log('hi')
   }, 100)
 
   useEffect(() => {

@@ -3,13 +3,10 @@ import styles from '../styles/PortfolioCard.module.css'
 import { FaGithub } from 'react-icons/fa'
 
 const PortfolioCard = ({ img, title, url, AOSDelay, githubUrl }) => {
-  const handleClick = () => {
-    console.log('clicked')
-  }
   return (
     <div data-aos='zoom-in' data-aos-delay={AOSDelay} className={styles.card}>
       <a href={githubUrl} target='_blank' rel='noreferrer'>
-        <div onClick={handleClick} className={styles.githubIcon}>
+        <div className={styles.githubIcon}>
           <FaGithub />
         </div>
       </a>
