@@ -19,6 +19,7 @@
   .card .overlay {
     transform: translateY(200%);
   }
+
   .card .githubIcon {
     transform: translate(100%, -100%);
   }
@@ -38,6 +39,7 @@
   transition: 300ms ease-in-out;
   transform: translateY(20%);
   opacity: 0.95;
+  z-index: 10;
 }
 
 .githubIcon {
@@ -86,6 +88,7 @@
   .card:hover .overlay {
     transform: translateY(40%);
   }
+
   .wave {
     transform: translateY(-70px);
   }
@@ -101,9 +104,11 @@
   .overlay {
     transform: translateY(40%);
   }
+
   .card:hover .overlay {
     transform: translateY(40%);
   }
+
   .wave {
     transform: translateY(-60px);
   }
@@ -113,12 +118,15 @@
   .overlay {
     transform: translateY(60%);
   }
+
   .card:hover .overlay {
     transform: translateY(60%);
   }
+
   .wave {
     transform: translateY(-50px);
   }
+
   .title {
     transform: translateY(-35px);
     font-size: 1.25rem;
@@ -129,12 +137,15 @@
   .overlay {
     transform: translateY(85%);
   }
+
   .card:hover .overlay {
     transform: translateY(75%);
   }
+
   .wave {
     transform: translateY(-50px);
   }
+
   .title {
     transform: translateY(-50px);
     font-size: 1rem;

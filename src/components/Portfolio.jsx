@@ -1,112 +1,100 @@
 import PortfolioCard from './PortfolioCard'
 import styles from '../styles/Portfolio.module.css'
-import image from '../assets/card-images/image.png'
 import image1 from '../assets/card-images/image1.png'
 import image2 from '../assets/card-images/image2.png'
 import image3 from '../assets/card-images/image3.png'
 import image4 from '../assets/card-images/image4.png'
 import image5 from '../assets/card-images/image5.png'
-import image6 from '../assets/card-images/image6.jpg'
+import image6 from '../assets/card-images/image6.png'
 import image7 from '../assets/card-images/image7.png'
 import image8 from '../assets/card-images/image8.png'
 import image9 from '../assets/card-images/image9.png'
-import image10 from '../assets/card-images/image10.jpg'
+import image10 from '../assets/card-images/image10.png'
 import image11 from '../assets/card-images/image11.png'
+import image12 from '../assets/card-images/image12.png'
 import PortfolioBg from './PortfolioBg'
 
 const cards = [
   {
-    id: 12,
-    path: image11,
+    path: image12,
     AOSDelay: 0,
     title: 'Electronics Store',
     url: 'https://lalvar-electronics-store.netlify.app',
     githubUrl: 'https://github.com/lLalvar/Electronics-store',
   },
   {
-    id: 11,
-    path: image10,
+    path: image11,
     AOSDelay: 200,
     title: 'Cryptoverse',
     url: 'https://lalvar-cryptoverse.netlify.app',
     githubUrl: 'https://github.com/lLalvar/cryptoverse',
   },
   {
-    id: 1,
-    path: image9,
+    path: image10,
     AOSDelay: 400,
     title: 'React Recipe App',
     url: 'https://lalvar-react-recipe-app.netlify.app',
     githubUrl: 'https://github.com/lLalvar/React-Recip-App',
   },
   {
-    id: 2,
     AOSDelay: 0,
-    path: image8,
+    path: image5,
+    title: 'React Dashboard',
+    url: 'https://lalvar-react-admin-dashboard.netlify.app/',
+    githubUrl: 'https://github.com/lLalvar/react-admin-dashboard',
+  },
+  {
+    AOSDelay: 200,
+    path: image9,
     title: 'Pizza Ordering App',
     url: 'https://nextjs-pizza-ordering-app.netlify.app',
     githubUrl: 'https://github.com/lLalvar/Pizza-Ordering-App',
   },
   {
-    id: 3,
-    AOSDelay: 200,
-    path: image,
+    AOSDelay: 400,
+    path: image1,
     title: 'Random User API',
     url: 'https://react-random-user-api.netlify.app',
     githubUrl: 'https://github.com/lLalvar/React-random-user-api',
   },
   {
-    id: 4,
-    AOSDelay: 400,
-    path: image1,
+    AOSDelay: 0,
+    path: image2,
     title: 'Form Input',
     url: 'https://react-form-no-framewoek.netlify.app',
     githubUrl: 'https://github.com/lLalvar/React-form_no-framework',
   },
   {
-    id: 5,
-    AOSDelay: 0,
-    path: image2,
+    AOSDelay: 200,
+    path: image3,
     title: 'Calculator App',
     url: 'https://llalvar.github.io/Calculator_App',
     githubUrl: 'https://github.com/lLalvar/Calculator_App',
   },
   {
-    id: 6,
-    AOSDelay: 200,
-    path: image3,
+    AOSDelay: 400,
+    path: image4,
     title: 'ToDo App',
     url: 'https://llalvar.github.io/Frontend-Mentor_Todo-app',
     githubUrl: 'https://github.com/lLalvar/Frontend-Mentor_Todo-app',
   },
   {
-    id: 7,
-    AOSDelay: 400,
-    path: image4,
-    title: 'Splitter',
-    url: 'https://llalvar.github.io/Ftontend-Mentor_tip-calculator-app',
-    githubUrl: 'https://github.com/lLalvar/Ftontend-Mentor_tip-calculator-app',
-  },
-  {
-    id: 8,
     AOSDelay: 0,
-    path: image5,
+    path: image6,
     title: 'Bootstrap Website',
     url: 'https://lalvar-bootstrap-website.netlify.app',
     githubUrl: 'https://github.com/lLalvar/bootstrap-website',
   },
   {
-    id: 9,
     AOSDelay: 200,
-    path: image6,
+    path: image7,
     title: 'Cocktail Website',
     url: 'https://lalvar-vuejs-cocktial.netlify.app',
     githubUrl: 'https://github.com/lLalvar/Vue.js-Cocktail-website',
   },
   {
-    id: 10,
     AOSDelay: 400,
-    path: image7,
+    path: image8,
     title: 'GPT-3',
     url: 'https://gpt3-react-mastery.netlify.app',
     githubUrl: 'https://github.com/lLalvar/gpt3',
@@ -142,9 +130,9 @@ const Portfolio = ({ portfolioRef }) => {
         </div>
         <PortfolioBg />
         <div className={styles.cards}>
-          {cards.map((card) => (
+          {cards.map((card, index) => (
             <PortfolioCard
-              key={card.id}
+              key={index}
               img={card.path}
               title={card.title}
               url={card.url}

@@ -13,6 +13,7 @@ const Footer = ({ footerRef }) => {
       <div className={styles.container}>
         <FooterBg1 />
         <FooterBg2 />
+
         <div className={styles.wrapper}>
           <div className={styles.itemsWrapper}>
             <h4 className={styles.title}>Social Media</h4>
@@ -20,11 +21,6 @@ const Footer = ({ footerRef }) => {
               title={'Github'}
               icon={<FaGithub />}
               link='https://github.com/lLalvar'
-            />
-            <FooterItem
-              title={'Upwork'}
-              icon={<SiUpwork />}
-              link='https://www.upwork.com/freelancers/~01a6676fe3936df9cb?viewMode=1'
             />
             <FooterItem
               title={'LinkedIn'}

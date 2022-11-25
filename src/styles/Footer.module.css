@@ -49,7 +49,7 @@ footer {
 }
 
 .locationWrapper {
-  cursor: pointer;
+  max-width: 200px;
 }
 
 .locationWrapper:hover .infoWrapper {
@@ -73,6 +73,7 @@ footer {
     align-items: center;
     gap: 1rem;
   }
+
   .title {
     text-align: center;
   }
@@ -80,6 +81,7 @@ footer {
   .locationContainer .infoWrapper {
     justify-content: center;
   }
+
   .locationContainer .title {
     margin-bottom: 0;
   }
