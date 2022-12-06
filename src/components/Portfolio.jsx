@@ -80,14 +80,14 @@ const cards = [
   },
   {
     AOSDelay: 0,
-    path: image6,
+    path: image7,
     title: 'Bootstrap Website',
     url: 'https://lalvar-bootstrap-website.netlify.app',
     githubUrl: 'https://github.com/lLalvar/bootstrap-website',
   },
   {
     AOSDelay: 200,
-    path: image7,
+    path: image6,
     title: 'Cocktail Website',
     url: 'https://lalvar-vuejs-cocktial.netlify.app',
     githubUrl: 'https://github.com/lLalvar/Vue.js-Cocktail-website',
