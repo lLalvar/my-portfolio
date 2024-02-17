@@ -1,11 +1,11 @@
-import { FaFacebook, FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 import { IoLocationSharp } from 'react-icons/io5'
-import { SiUpwork } from 'react-icons/si'
-import styles from '../styles/Footer.module.css'
-import FooterItem from './FooterItem'
-import image from '../assets/map.jpg'
 import FooterBg1 from '../assets/bg-images/FooterBg1'
 import FooterBg2 from '../assets/bg-images/FooterBg2'
+import image from '../assets/map.jpg'
+import styles from '../styles/Footer.module.css'
+import FooterItem from './FooterItem'
 
 const Footer = ({ footerRef }) => {
   return (
@@ -29,7 +29,7 @@ const Footer = ({ footerRef }) => {
             />
             <FooterItem
               title={'Twitter'}
-              icon={<FaTwitter />}
+              icon={<FaXTwitter />}
               link='https://twitter.com/ILalvar'
             />
             <FooterItem
