@@ -22,9 +22,9 @@ const skills = [
 ]
 
 export default function Skills({
-  setEasterEggCount,
+  incrementEasterEgg,
 }: {
-  setEasterEggCount: React.Dispatch<React.SetStateAction<number>>
+  incrementEasterEgg: () => void
 }) {
   return (
     <section id='skills' className='relative py-20 md:py-32'>
@@ -115,9 +115,7 @@ export default function Skills({
           <Button
             variant='secondary'
             size='lg'
-            onClick={() => {
-              setEasterEggCount((prev) => prev + 1)
-            }}
+            onClick={() => incrementEasterEgg()}
             className='group'
           >
             <motion.span

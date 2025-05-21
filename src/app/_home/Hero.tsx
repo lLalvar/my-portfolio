@@ -26,6 +26,7 @@ export default function Hero() {
               repeat: Infinity,
               repeatType: 'reverse',
             }}
+            initial={{ opacity: 0 }}
             className='bg-primary absolute top-1/4 left-1/4 h-64 w-64 rounded-full blur-3xl'
           />
           <motion.div
@@ -39,6 +40,7 @@ export default function Hero() {
               repeat: Infinity,
               repeatType: 'reverse',
             }}
+            initial={{ opacity: 0 }}
             className='bg-accent-foreground absolute right-1/4 bottom-1/3 h-80 w-80 rounded-full blur-3xl'
           />
         </div>

@@ -114,7 +114,7 @@ const Main = () => {
       />
       <Hero />
       <Projects />
-      <Skills setEasterEggCount={() => {}} />
+      <Skills incrementEasterEgg={incrementEasterEgg} />
       <Footer incrementEasterEgg={incrementEasterEgg} />
     </div>
   )

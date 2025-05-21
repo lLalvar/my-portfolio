@@ -20,10 +20,12 @@ export default function Header({
   incrementEasterEgg: () => void
 }) {
   const { setTheme, resolvedTheme } = useTheme()
+  const [localTheme, setLocalTheme] = useState('light')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isSpinning, setIsSpinning] = useState(false)
 
   const toggleTheme = () => {
+    setLocalTheme(localTheme === 'dark' ? 'light' : 'dark')
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
   }
 
@@ -95,11 +97,7 @@ export default function Header({
               onClick={toggleTheme}
               className='ms-2 rounded-full'
             >
-              {resolvedTheme === 'dark' ? (
-                <Sun size={20} />
-              ) : (
-                <Moon size={20} />
-              )}
+              {localTheme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </Button>
           </motion.div>
         </div>
@@ -116,11 +114,7 @@ export default function Header({
               onClick={toggleTheme}
               className='mr-2'
             >
-              {resolvedTheme === 'dark' ? (
-                <Sun size={20} />
-              ) : (
-                <Moon size={20} />
-              )}
+              {localTheme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </Button>
           </motion.div>
           <Button
