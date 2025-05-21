@@ -1,10 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import { Menu, Moon, Sun, X, Zap } from 'lucide-react'
+import { Menu, Moon, Sun, X } from 'lucide-react'
+import { useTheme } from 'next-themes'
 
 import { Button } from '@/components/ui/button'
 
@@ -12,49 +13,18 @@ import FunNavLink from './FunNavLink'
 import MobileNavLink from './MobileNavLink'
 
 export default function Header({
+  activeSection,
   incrementEasterEgg,
 }: {
+  activeSection: string
   incrementEasterEgg: () => void
 }) {
-  const [theme, setTheme] = useState('light')
-  const [activeSection, setActiveSection] = useState('home')
+  const { setTheme, resolvedTheme } = useTheme()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isSpinning, setIsSpinning] = useState(false)
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light'
-    setTheme(savedTheme)
-    document.documentElement.classList.toggle('dark', savedTheme === 'dark')
-
-    const handleScroll = () => {
-      const sections = ['home', 'projects', 'skills']
-      let current = ''
-
-      for (const section of sections) {
-        const element = document.getElementById(section)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          if (rect.top <= 300 && rect.bottom >= 300) {
-            current = section
-            break
-          }
-        }
-      }
-
-      if (current && current !== activeSection) {
-        setActiveSection(current)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [activeSection])
-
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light'
-    setTheme(newTheme)
-    localStorage.setItem('theme', newTheme)
-    document.documentElement.classList.toggle('dark', newTheme === 'dark')
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
   }
 
   const toggleSpin = () => {
@@ -68,7 +38,7 @@ export default function Header({
 
   return (
     <header className='bg-background/80 border-border fixed top-0 left-0 z-40 h-17 w-full border-b backdrop-blur-md'>
-      <div className='container flex items-center justify-between py-4'>
+      <div className='container flex items-center justify-between py-4 md:max-w-[90rem]'>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -85,7 +55,13 @@ export default function Header({
             onClick={toggleSpin}
             className='text-primary cursor-pointer'
           >
-            <Image src='/logo.png' alt='Logo' width={24} height={24} />
+            <Image
+              src='/logo.png'
+              alt='Logo'
+              width={24}
+              height={24}
+              className='dark:brightness-90'
+            />
             {/* <Zap size={24} /> */}
           </motion.div>
           <motion.span
@@ -117,9 +93,13 @@ export default function Header({
               variant='ghost'
               size='icon'
               onClick={toggleTheme}
-              className='ml-4 rounded-full'
+              className='ms-2 rounded-full'
             >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              {resolvedTheme === 'dark' ? (
+                <Sun size={20} />
+              ) : (
+                <Moon size={20} />
+              )}
             </Button>
           </motion.div>
         </div>
@@ -136,7 +116,11 @@ export default function Header({
               onClick={toggleTheme}
               className='mr-2'
             >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              {resolvedTheme === 'dark' ? (
+                <Sun size={20} />
+              ) : (
+                <Moon size={20} />
+              )}
             </Button>
           </motion.div>
           <Button
@@ -163,21 +147,21 @@ export default function Header({
               <MobileNavLink
                 href='#home'
                 isActive={activeSection === 'home'}
-                onClick={() => setMobileMenuOpen(false)}
+                setMobileMenuOpen={setMobileMenuOpen}
               >
                 🏠 Home
               </MobileNavLink>
               <MobileNavLink
                 href='#projects'
                 isActive={activeSection === 'projects'}
-                onClick={() => setMobileMenuOpen(false)}
+                setMobileMenuOpen={setMobileMenuOpen}
               >
                 🚀 Projects
               </MobileNavLink>
               <MobileNavLink
                 href='#skills'
                 isActive={activeSection === 'skills'}
-                onClick={() => setMobileMenuOpen(false)}
+                setMobileMenuOpen={setMobileMenuOpen}
               >
                 🧠 Skills
               </MobileNavLink>

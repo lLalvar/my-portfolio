@@ -6,15 +6,19 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 
 const skills = [
-  { name: 'Next.js', category: 'Frontend', emoji: '⚡' },
-  { name: 'React', category: 'Frontend', emoji: '⚛️' },
-  { name: 'TypeScript', category: 'Language', emoji: '🔷' },
-  { name: 'JavaScript', category: 'Language', emoji: '🟨' },
-  { name: 'Tailwind CSS', category: 'Styling', emoji: '🌊' },
-  { name: 'Framer Motion', category: 'Animation', emoji: '🎬' },
-  { name: 'Nuxt', category: 'Frontend', emoji: '🌱' },
-  { name: 'Electron', category: 'Desktop', emoji: '💻' },
-  { name: 'Vue.js', category: 'Frontend', emoji: '🟩' },
+  { name: 'Next.js', category: 'Frontend', icon: '/icons/nextjs.png' },
+  { name: 'Electron', category: 'Desktop', icon: '/icons/electron.svg' },
+  { name: 'React', category: 'Frontend', icon: '/icons/react.png' },
+  { name: 'Nuxt', category: 'Frontend', icon: '/icons/nuxt.svg' },
+  { name: 'Vue.js', category: 'Frontend', icon: '/icons/vue.png' },
+  { name: 'TypeScript', category: 'Language', icon: '/icons/typescript.png' },
+  { name: 'JavaScript', category: 'Language', icon: '/icons/javascript.png' },
+  { name: 'Tailwind CSS', category: 'Styling', icon: '/icons/tailwindcss.png' },
+  {
+    name: 'Framer Motion',
+    category: 'Animation',
+    icon: '/icons/motion.png',
+  },
 ]
 
 export default function Skills({
@@ -32,7 +36,7 @@ export default function Skills({
             opacity: [0.1, 0.2, 0.1],
           }}
           transition={{ duration: 12, repeat: Infinity }}
-          className='bg-primary/10 absolute top-1/4 right-1/4 h-64 w-64 rounded-full blur-3xl'
+          className='bg-primary absolute top-1/4 right-1/4 h-64 w-64 rounded-full blur-3xl'
         />
         <motion.div
           animate={{
@@ -41,7 +45,7 @@ export default function Skills({
             opacity: [0.1, 0.15, 0.1],
           }}
           transition={{ duration: 15, repeat: Infinity }}
-          className='bg-accent/10 absolute bottom-1/3 left-1/3 h-72 w-72 rounded-full blur-3xl'
+          className='bg-accent-foreground absolute bottom-1/3 left-1/3 h-72 w-72 rounded-full blur-3xl'
         />
       </div>
 
@@ -93,7 +97,7 @@ export default function Skills({
               <FunSkillBar
                 key={index}
                 name={skill.name}
-                emoji={skill.emoji}
+                icon={skill.icon}
                 category={skill.category}
                 index={index}
               />

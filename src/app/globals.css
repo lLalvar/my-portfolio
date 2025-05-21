@@ -159,6 +159,10 @@
     @apply bg-background text-foreground font-sans;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;

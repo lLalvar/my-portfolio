@@ -108,7 +108,10 @@ const Main = () => {
         </div>
       </div>
 
-      <Header incrementEasterEgg={incrementEasterEgg} />
+      <Header
+        activeSection={activeSection}
+        incrementEasterEgg={incrementEasterEgg}
+      />
       <Hero />
       <Projects />
       <Skills setEasterEggCount={() => {}} />

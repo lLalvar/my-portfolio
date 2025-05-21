@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useState } from 'react'
 
 import { motion } from 'framer-motion'
@@ -6,12 +7,12 @@ import { cn } from '@/lib/utils'
 
 export default function FunSkillBar({
   name,
-  emoji,
+  icon,
   index,
   category,
 }: {
   name: string
-  emoji: string
+  icon: string
   index: number
   category: string
 }) {
@@ -34,6 +35,8 @@ export default function FunSkillBar({
         return 'linear-gradient(90deg, #6366F1, #818CF8)'
       case 'markup':
         return 'linear-gradient(90deg, #EF4444, #F87171)'
+      case 'desktop':
+        return 'linear-gradient(90deg, #FBBF24, #F59E0B)'
       default:
         return 'linear-gradient(90deg, #6B7280, #9CA3AF)'
     }
@@ -56,6 +59,8 @@ export default function FunSkillBar({
         return 'Managing all the things 🧠'
       case 'markup':
         return 'Structuring the digital world 📐'
+      case 'desktop':
+        return 'Crafting desktop magic 🖥️'
       default:
         return 'Creating digital magic ✨'
     }
@@ -83,7 +88,7 @@ export default function FunSkillBar({
             }}
             transition={{ duration: 0.5 }}
           >
-            {emoji}
+            <Image src={icon} alt={`${name} icon`} width={24} height={24} />
           </motion.span>
           {name}
         </span>

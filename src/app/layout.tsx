@@ -1,4 +1,5 @@
 import JsonLdScript from '@/components/JsonLdScript'
+import { ThemeProvider } from '@/components/theme-provider'
 import { generateSiteJsonLd } from '@/utils/seo/jsonLd'
 import { mainMetadata } from '@/utils/seo/metadata'
 
@@ -22,7 +23,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
