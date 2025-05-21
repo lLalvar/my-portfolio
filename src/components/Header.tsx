@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, Moon, Sun, X } from 'lucide-react'
@@ -20,7 +20,7 @@ export default function Header({
   incrementEasterEgg: () => void
 }) {
   const { setTheme, resolvedTheme } = useTheme()
-  const [localTheme, setLocalTheme] = useState('light')
+  const [localTheme, setLocalTheme] = useState<string | undefined>()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isSpinning, setIsSpinning] = useState(false)
 
@@ -28,6 +28,12 @@ export default function Header({
     setLocalTheme(localTheme === 'dark' ? 'light' : 'dark')
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
   }
+
+  useEffect(() => {
+    if (resolvedTheme) {
+      setLocalTheme(resolvedTheme)
+    }
+  }, [resolvedTheme])
 
   const toggleSpin = () => {
     if (!isSpinning) {
@@ -64,7 +70,6 @@ export default function Header({
               height={24}
               className='dark:brightness-90'
             />
-            {/* <Zap size={24} /> */}
           </motion.div>
           <motion.span
             className='text-2xl font-bold tracking-tight select-none'
@@ -97,7 +102,13 @@ export default function Header({
               onClick={toggleTheme}
               className='ms-2 rounded-full'
             >
-              {localTheme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              {!localTheme ? (
+                ''
+              ) : localTheme === 'dark' ? (
+                <Sun size={20} />
+              ) : (
+                <Moon size={20} />
+              )}
             </Button>
           </motion.div>
         </div>
@@ -114,7 +125,13 @@ export default function Header({
               onClick={toggleTheme}
               className='mr-2'
             >
-              {localTheme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              {!localTheme ? (
+                ''
+              ) : localTheme === 'dark' ? (
+                <Sun size={20} />
+              ) : (
+                <Moon size={20} />
+              )}
             </Button>
           </motion.div>
           <Button
