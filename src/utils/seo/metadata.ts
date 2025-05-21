@@ -5,26 +5,26 @@ import { APP_URL } from '@/constants'
 
 const images = [
   {
-    url: '/logo.png',
-    width: 155,
-    height: 44,
-    alt: 'Askew Industries logo',
+    url: '/avatar.webp',
+    width: 400,
+    height: 400,
+    alt: 'Lalvar Portfolio avatar',
   },
 ]
 
 export function mainMetadata(): Metadata {
   return {
     metadataBase,
-    title: 'Revolutionizing Modern Maintenance | Askew Industries',
+    title: 'Lalvar | Frontend Developer Portfolio',
     description:
-      'Your complete solution for seamless maintenance processes in the mining and industrial industries. Optimize performance, ensure compliance, and reduce downtime with advanced tools from Askew Industries.',
+      'Explore the portfolio of Lalvar, a frontend developer specializing in React, Next.js, and modern web technologies. Discover projects, skills, and creative work.',
     keywords:
-      'Askew Industries, mining maintenance, industrial maintenance, predictive maintenance, automated scheduling, compliance tracking, maintenance app, reduce downtime, optimize performance, regulatory compliance, maintenance technology, industrial solutions',
-    category: 'website',
+      'Lalvar, frontend developer, portfolio, React, Next.js, JavaScript, web development, UI, UX, projects, web design, creative developer',
+    category: 'portfolio',
     openGraph: {
-      title: 'Revolutionizing Modern Maintenance | Askew Industries',
+      title: 'Lalvar | Frontend Developer Portfolio',
       description:
-        'Complete solution for seamless maintenance in mining and industrial sectors. Optimize performance, ensure compliance, and reduce downtime with advanced tools.',
+        'Showcasing projects, skills, and creativity in modern web development. Explore Lalvar’s work and expertise in React, Next.js, and more.',
       images,
       type: 'website',
       siteName,

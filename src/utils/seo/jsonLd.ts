@@ -6,17 +6,17 @@ export function generateSiteJsonLd(): object {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: siteName,
-    alternateName: 'Askew Industries',
+    alternateName: 'Lalvar Portfolio',
     url: APP_URL,
     description:
-      'Your complete solution for seamless maintenance processes in the mining and industrial industries. Optimize performance, ensure compliance, and reduce downtime with advanced tools from Askew Industries.',
-    image: `${APP_URL}/logo.png`,
+      'The personal portfolio of Lalvar, a frontend developer passionate about creating engaging web experiences. Explore projects, skills, and more.',
+    image: `${APP_URL}/avatar.webp`,
     publisher: {
-      '@type': 'Organization',
+      '@type': 'Person',
       name: siteName,
-      logo: {
+      image: {
         '@type': 'ImageObject',
-        url: `${APP_URL}/logo.png`,
+        url: `${APP_URL}/avatar.webp`,
       },
     },
   }
