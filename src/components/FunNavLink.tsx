@@ -23,7 +23,6 @@ export default function FunNavLink({
       {children}
       {isActive && (
         <motion.span
-          // Using unique layoutId for each navigation link
           layoutId={`navIndicator-${href.replace('#', '')}`}
           className='bg-primary absolute right-0 -bottom-1 left-0 h-0.5'
           initial={{ opacity: 0 }}
@@ -34,6 +33,7 @@ export default function FunNavLink({
           transition={{
             duration: 2,
             repeat: Infinity,
+            repeatType: 'mirror',
           }}
         />
       )}

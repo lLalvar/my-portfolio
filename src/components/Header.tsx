@@ -8,6 +8,7 @@ import { Menu, Moon, Sun, X } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
 import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 
 import FunNavLink from './FunNavLink'
 import MobileNavLink from './MobileNavLink'
@@ -100,16 +101,10 @@ export default function Header({
               variant='ghost'
               size='icon'
               onClick={toggleTheme}
-              className='ms-2 rounded-full'
+              className={cn('ms-2 rounded-full', !localTheme && 'opacity-0')}
               aria-label='Toggle theme'
             >
-              {!localTheme ? (
-                ''
-              ) : localTheme === 'dark' ? (
-                <Sun size={20} />
-              ) : (
-                <Moon size={20} />
-              )}
+              {localTheme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </Button>
           </motion.div>
         </div>
@@ -124,16 +119,10 @@ export default function Header({
               variant='ghost'
               size='icon'
               onClick={toggleTheme}
-              className='mr-2'
+              className={cn('ms-2', !localTheme && 'opacity-0')}
               aria-label='Toggle theme'
             >
-              {!localTheme ? (
-                ''
-              ) : localTheme === 'dark' ? (
-                <Sun size={20} />
-              ) : (
-                <Moon size={20} />
-              )}
+              {localTheme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </Button>
           </motion.div>
           <Button
