@@ -101,6 +101,7 @@ export default function Header({
               size='icon'
               onClick={toggleTheme}
               className='ms-2 rounded-full'
+              aria-label='Toggle theme'
             >
               {!localTheme ? (
                 ''
@@ -124,6 +125,7 @@ export default function Header({
               size='icon'
               onClick={toggleTheme}
               className='mr-2'
+              aria-label='Toggle theme'
             >
               {!localTheme ? (
                 ''
@@ -138,6 +140,7 @@ export default function Header({
             variant='ghost'
             size='icon'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label='Toggle mobile menu'
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>

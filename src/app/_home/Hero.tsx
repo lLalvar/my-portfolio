@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <main
       id='home'
-      className='relative container flex min-h-[calc(100dvh-var(--spacing)*17)] flex-col items-center justify-center gap-16 px-4 pt-20 md:flex-row md:gap-8 md:overflow-hidden md:px-12'
+      className='relative container flex min-h-[calc(100dvh-var(--spacing)*17)] flex-col items-center justify-center gap-16 px-4 pt-20 md:flex-row md:gap-16 md:overflow-hidden md:px-12'
     >
       <div className='flex w-full flex-2 items-center'>
         <div className='pointer-events-none absolute inset-0 overflow-hidden'>
@@ -279,8 +279,9 @@ export default function Hero() {
           <Image
             src='/avatar.webp'
             alt="Lalvar's Avatar"
-            fill
-            className='scale-105 object-cover transition-transform duration-500 hover:scale-110 dark:brightness-90'
+            width={400}
+            height={400}
+            className='object-cover transition-transform duration-500 hover:scale-105 dark:brightness-90'
             priority
           />
         </div>
