@@ -1,42 +1,34 @@
 'use client'
 
+import Image from 'next/image'
+
 import { motion } from 'framer-motion'
-import { Box, Github, Linkedin, Mail } from 'lucide-react'
+import { Github, Heart, Linkedin, Mail, Sparkles } from 'lucide-react'
 
 import { Separator } from '@/components/ui/separator'
 
 import SocialButton from './SocialButton'
 
-export default function Footer({
-  incrementEasterEgg,
-}: {
-  incrementEasterEgg: () => void
-}) {
+export default function Footer() {
   return (
     <footer className='border-border bg-card/40 border-t py-16 backdrop-blur-sm'>
       <div className='container'>
         <div className='mx-auto max-w-5xl'>
           <div className='mb-8 flex flex-col items-start justify-between md:flex-row md:items-center'>
             <div className='mb-6 md:mb-0'>
-              <motion.div
-                className='mb-2 flex items-center gap-2'
-                whileHover={{ y: -5 }}
-                transition={{ type: 'spring', stiffness: 400 }}
-              >
-                <motion.div
-                  animate={{ rotate: [0, 360] }}
-                  transition={{
-                    duration: 10,
-                    repeat: Infinity,
-                    ease: 'linear',
-                  }}
-                >
-                  <Box size={20} className='text-primary' />
-                </motion.div>
-                <span className='text-xl font-bold tracking-tight'>Lalvar</span>
-              </motion.div>
-              <p className='text-muted-foreground'>
-                Frontend Developer & Creative Coder ✨
+              <div className='mb-2 flex items-center gap-0.5'>
+                <Image
+                  src='/logo.png'
+                  alt='Logo'
+                  width={24}
+                  height={24}
+                  className='dark:brightness-90'
+                />
+                <span className='text-2xl font-bold tracking-tight'>alvar</span>
+              </div>
+              <p className='text-muted-foreground flex items-center gap-1.5'>
+                Frontend Developer & Creative Coder
+                <Sparkles size={14} className='text-primary' />
               </p>
             </div>
 
@@ -77,38 +69,39 @@ export default function Footer({
           <Separator className='mb-8' />
 
           <div className='flex flex-col items-center justify-between md:flex-row'>
-            <motion.p
-              className='text-muted-foreground mb-4 text-sm md:mb-0'
-              whileHover={{ color: '#FF5252' }}
-              onClick={() => incrementEasterEgg()}
-            >
-              © {new Date().getFullYear()} Lalvar. Made with ❤️
-            </motion.p>
+            <p className='text-muted-foreground mb-4 flex items-center gap-1.5 text-sm md:mb-0'>
+              © {new Date().getFullYear()} Lalvar. Made with{' '}
+              <Heart size={14} className='text-primary fill-primary' />
+            </p>
 
             <div className='flex items-center gap-6'>
-              <motion.a
+              <a
                 href='#home'
                 className='text-muted-foreground hover:text-foreground text-sm transition-colors'
-                whileHover={{ scale: 1.1, x: -2, y: -2 }}
               >
-                Back to top 🔝
-              </motion.a>
+                Back to top
+              </a>
               <span className='text-border'>•</span>
-              <motion.a
+              <a
+                href='#experience'
+                className='text-muted-foreground hover:text-foreground text-sm transition-colors'
+              >
+                Experience
+              </a>
+              <span className='text-border'>•</span>
+              <a
                 href='#projects'
                 className='text-muted-foreground hover:text-foreground text-sm transition-colors'
-                whileHover={{ scale: 1.1, rotate: -3 }}
               >
-                Projects 🚀
-              </motion.a>
+                Projects
+              </a>
               <span className='text-border'>•</span>
-              <motion.a
+              <a
                 href='#skills'
                 className='text-muted-foreground hover:text-foreground text-sm transition-colors'
-                whileHover={{ scale: 1.1, rotate: 3 }}
               >
-                Skills 🧠
-              </motion.a>
+                Skills
+              </a>
             </div>
           </div>
         </div>

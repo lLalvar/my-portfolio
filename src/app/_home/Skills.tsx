@@ -1,133 +1,120 @@
-import { motion } from 'framer-motion'
-import { Terminal, Trophy } from 'lucide-react'
+import Image from 'next/image'
 
-import FunSkillBar from '@/components/FunSkillBar'
+import { motion } from 'framer-motion'
+import { Code } from 'lucide-react'
+
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 
 const skills = [
-  { name: 'Next.js', category: 'Frontend', icon: '/icons/nextjs.png' },
-  { name: 'Electron', category: 'Desktop', icon: '/icons/electron.svg' },
-  { name: 'React', category: 'Frontend', icon: '/icons/react.png' },
-  { name: 'Nuxt', category: 'Frontend', icon: '/icons/nuxt.svg' },
-  { name: 'Vue.js', category: 'Frontend', icon: '/icons/vue.png' },
-  { name: 'TypeScript', category: 'Language', icon: '/icons/typescript.png' },
-  { name: 'JavaScript', category: 'Language', icon: '/icons/javascript.png' },
-  { name: 'Tailwind CSS', category: 'Styling', icon: '/icons/tailwindcss.png' },
-  {
-    name: 'Framer Motion',
-    category: 'Animation',
-    icon: '/icons/motion.png',
-  },
+  { name: 'React', icon: '/icons/react.png' },
+  { name: 'Next.js', icon: '/icons/nextjs.png' },
+  { name: 'Vue.js', icon: '/icons/vue.png' },
+  { name: 'Nuxt.js', icon: '/icons/nuxt.svg' },
+  { name: 'TypeScript', icon: '/icons/typescript.png' },
+  { name: 'JavaScript', icon: '/icons/javascript.png' },
+  { name: 'Tailwind CSS', icon: '/icons/tailwindcss.png' },
+  { name: 'Electron', icon: '/icons/electron.svg' },
 ]
 
-export default function Skills({
-  incrementEasterEgg,
-}: {
-  incrementEasterEgg: () => void
-}) {
-  return (
-    <section id='skills' className='relative py-20 md:py-32'>
-      <div className='pointer-events-none absolute inset-0 overflow-hidden'>
-        <motion.div
-          animate={{
-            x: [0, 30, 0],
-            y: [0, -20, 0],
-            opacity: [0.1, 0.2, 0.1],
-          }}
-          transition={{ duration: 12, repeat: Infinity }}
-          className='bg-primary absolute top-1/4 right-1/4 h-64 w-64 rounded-full blur-3xl'
-        />
-        <motion.div
-          animate={{
-            x: [0, -20, 0],
-            y: [0, 30, 0],
-            opacity: [0.1, 0.15, 0.1],
-          }}
-          transition={{ duration: 15, repeat: Infinity }}
-          className='bg-accent-foreground absolute bottom-1/3 left-1/3 h-72 w-72 rounded-full blur-3xl'
-        />
-      </div>
+const tools = [
+  'Docker',
+  'Git',
+  'Figma',
+  'Storybook',
+  'Shadcn UI',
+  'Material UI',
+]
 
-      <div className='relative container'>
+export default function Skills() {
+  return (
+    <section id='skills' className='relative py-8 md:py-12'>
+      <div className='container'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className='mb-16 max-w-xl'
+          className='mb-6 max-w-2xl'
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Badge
-              variant='outline'
-              className='border-muted bg-muted/50 mb-4 gap-2 px-4 py-1.5 text-sm'
-            >
-              <Terminal size={14} />
-              <span>Super Powers</span>
-            </Badge>
-          </motion.div>
-          <h2 className='mb-4 text-4xl font-bold tracking-tighter md:text-5xl'>
-            Skills &
-            <motion.span
-              className='text-primary ml-2'
-              animate={{
-                scale: [1, 1.1, 1],
-                rotateZ: [0, 2, 0, -2, 0],
-              }}
-              transition={{ duration: 5, repeat: Infinity }}
-            >
-              Technologies
-            </motion.span>
+          <Badge
+            variant='outline'
+            className='border-muted bg-muted/50 mb-3 gap-2 px-4 py-1.5 text-sm'
+          >
+            <Code size={14} />
+            <span>Technologies</span>
+          </Badge>
+          <h2 className='mb-3 text-4xl font-bold tracking-tight md:text-5xl'>
+            Skills & Technologies
           </h2>
           <p className='text-muted-foreground text-lg'>
-            The tools and technologies I use to bring ideas to life. Hover to
-            see them in action!
+            Languages, frameworks, and tools I use to build modern web
+            applications.
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className='relative'
-        >
-          <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
-            {skills.map((skill, index) => (
-              <FunSkillBar
-                key={index}
-                name={skill.name}
-                icon={skill.icon}
-                category={skill.category}
-                index={index}
-              />
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div
-          className='mt-16 flex justify-center'
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-        >
-          <Button
-            variant='secondary'
-            size='lg'
-            onClick={() => incrementEasterEgg()}
-            className='group'
+        <div className='space-y-6'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
           >
-            <motion.span
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className='mr-2'
-            >
-              <Trophy size={16} />
-            </motion.span>
-            <span>I love what I do!</span>
-          </Button>
-        </motion.div>
+            <h3 className='text-muted-foreground mb-3 text-sm font-semibold tracking-wider uppercase'>
+              Languages & Frameworks
+            </h3>
+            <div className='grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4'>
+              {skills.map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  className='bg-muted group hover:bg-muted/80 flex flex-col items-center gap-3 rounded-lg p-4 transition-colors'
+                >
+                  <div className='relative h-12 w-12'>
+                    <Image
+                      src={skill.icon}
+                      alt={skill.name}
+                      fill
+                      className='object-contain'
+                    />
+                  </div>
+                  <span className='text-sm font-medium'>{skill.name}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h3 className='text-muted-foreground mb-3 text-sm font-semibold tracking-wider uppercase'>
+              Tools & DevOps
+            </h3>
+            <div className='flex flex-wrap gap-3'>
+              {tools.map((tool, index) => (
+                <motion.div
+                  key={tool}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                >
+                  <Badge
+                    variant='secondary'
+                    className='bg-muted px-4 py-2 text-sm font-medium'
+                  >
+                    {tool}
+                  </Badge>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   )

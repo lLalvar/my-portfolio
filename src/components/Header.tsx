@@ -13,13 +13,7 @@ import { cn } from '@/lib/utils'
 import FunNavLink from './FunNavLink'
 import MobileNavLink from './MobileNavLink'
 
-export default function Header({
-  activeSection,
-  incrementEasterEgg,
-}: {
-  activeSection: string
-  incrementEasterEgg: () => void
-}) {
+export default function Header({ activeSection }: { activeSection: string }) {
   const { setTheme, resolvedTheme } = useTheme()
   const [localTheme, setLocalTheme] = useState<string | undefined>()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -53,7 +47,6 @@ export default function Header({
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           className='flex items-center gap-0.5'
-          onClick={incrementEasterEgg}
         >
           <motion.div
             animate={{
@@ -72,19 +65,21 @@ export default function Header({
               className='dark:brightness-90'
             />
           </motion.div>
-          <motion.span
-            className='text-2xl font-bold tracking-tight select-none'
-            whileHover={{ y: [0, -3, 0] }}
-            transition={{ duration: 0.5, repeat: Infinity }}
-          >
+          <span className='text-2xl font-bold tracking-tight select-none'>
             alvar
-          </motion.span>
+          </span>
         </motion.div>
 
         {/* Desktop Navigation */}
         <div className='hidden items-center gap-8 md:flex'>
           <FunNavLink href='#home' isActive={activeSection === 'home'}>
             Home
+          </FunNavLink>
+          <FunNavLink
+            href='#experience'
+            isActive={activeSection === 'experience'}
+          >
+            Experience
           </FunNavLink>
           <FunNavLink href='#projects' isActive={activeSection === 'projects'}>
             Projects
@@ -152,21 +147,28 @@ export default function Header({
                 isActive={activeSection === 'home'}
                 setMobileMenuOpen={setMobileMenuOpen}
               >
-                🏠 Home
+                Home
+              </MobileNavLink>
+              <MobileNavLink
+                href='#experience'
+                isActive={activeSection === 'experience'}
+                setMobileMenuOpen={setMobileMenuOpen}
+              >
+                Experience
               </MobileNavLink>
               <MobileNavLink
                 href='#projects'
                 isActive={activeSection === 'projects'}
                 setMobileMenuOpen={setMobileMenuOpen}
               >
-                🚀 Projects
+                Projects
               </MobileNavLink>
               <MobileNavLink
                 href='#skills'
                 isActive={activeSection === 'skills'}
                 setMobileMenuOpen={setMobileMenuOpen}
               >
-                🧠 Skills
+                Skills
               </MobileNavLink>
             </div>
           </motion.div>

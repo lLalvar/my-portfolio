@@ -15,23 +15,63 @@ const images = [
 export function mainMetadata(): Metadata {
   return {
     metadataBase,
-    title: 'Lalvar | Frontend Developer Portfolio',
+    title: 'Lalvar | Frontend Developer - React, Next.js, Vue.js Specialist',
     description:
-      'Explore the portfolio of Lalvar, a frontend developer specializing in React, Next.js, and modern web technologies. Discover projects, skills, and creative work.',
-    keywords:
-      'Lalvar, frontend developer, portfolio, React, Next.js, JavaScript, web development, UI, UX, projects, web design, creative developer',
+      'Frontend Developer with 4+ years of experience specializing in React, Next.js, Vue.js, and modern web development. Currently at Shiftr, building e-commerce platforms and custom dashboards. Based in Armenia.',
+    keywords: [
+      'Lalvar',
+      'Frontend Developer',
+      'React Developer',
+      'Next.js Developer',
+      'Vue.js Developer',
+      'TypeScript Developer',
+      'Web Developer Armenia',
+      'Frontend Engineer',
+      'React Portfolio',
+      'Next.js Portfolio',
+      'Vue.js Portfolio',
+      'E-commerce Developer',
+      'UI Developer',
+      'JavaScript Developer',
+      'Tailwind CSS',
+      'Shadcn UI',
+      'Material UI',
+      'Responsive Web Design',
+      'Web Development Armenia',
+      'Frontend Developer Portfolio',
+    ].join(', '),
+    authors: [{ name: 'Lalvar' }],
     category: 'portfolio',
     openGraph: {
-      title: 'Lalvar | Frontend Developer Portfolio',
+      title: 'Lalvar | Frontend Developer - React, Next.js, Vue.js Specialist',
       description:
-        'Showcasing projects, skills, and creativity in modern web development. Explore Lalvar’s work and expertise in React, Next.js, and more.',
+        'Frontend Developer with 4+ years of experience building responsive, accessible, and high-performance web applications. Specializing in React, Next.js, Vue.js, TypeScript, and modern web technologies.',
       images,
-      type: 'website',
+      type: 'profile',
       siteName,
       url: APP_URL,
+      locale: 'en_US',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Lalvar | Frontend Developer Portfolio',
+      description:
+        'Frontend Developer with 4+ years of experience in React, Next.js, Vue.js, and modern web development.',
+      images: images.map((img) => `${APP_URL}${img.url}`),
     },
     alternates: {
       canonical: APP_URL,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   }
 }
